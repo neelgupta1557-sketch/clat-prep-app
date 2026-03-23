@@ -1,7 +1,7 @@
 // PDF DATA (EDIT HERE ONLY)
 let pdfData = [
   {
-    title: "Legal Reasoning Notes",
+    title: "Nature and Stages of Crime",
     category: "Law",
     link: "legal.pdf"
   },
