@@ -1,13 +1,13 @@
 let pdfData = [
   // LAW OF CRIMES
   {title:"Nature and Stages of Crime 1", category:"Law of Crimes", link:"legal.pdf"},
-  {title:"Punishment in IPC 2", category:"Law of Crimes", link:"pdfs/crimes2.pdf"},
-  {title:"Elements of Criminal liability 3", category:"Law of Crimes", link:"pdfs/crimes1.pdf"},
-  {title:"Joint Liability 4", category:"Law of Crimes", link:"pdfs/crimes2.pdf"},
-  {title:"General Exceptions 5", category:"Law of Crimes", link:"pdfs/crimes1.pdf"},
-  {title:"Offences Affecting The Human Body 6", category:"Law of Crimes", link:"pdfs/crimes2.pdf"},
-  {title:"Offences Against Property 7", category:"Law of Crimes", link:"pdfs/crimes1.pdf"},
-  {title:"Other Offences 8", category:"Law of Crimes", link:"pdfs/crimes2.pdf"},
+  {title:"Punishment in IPC 2", category:"Law of Crimes", link:"punishment_in_ipc.pdf"},
+  {title:"Elements of Criminal liability 3", category:"Law of Crimes", link:"elements_of_criminal_liability.pdf"},
+  {title:"Joint Liability 4", category:"Law of Crimes", link:"joint_liability.pdf"},
+  {title:"General Exceptions 5", category:"Law of Crimes", link:"general_exceptions.pdf"},
+  {title:"Offences Affecting The Human Body 6", category:"Law of Crimes", link:"offences_affecting_the_human_body.pdf"},
+  {title:"Offences Against Property 7", category:"Law of Crimes", link:"offences_against_property.pdf"},
+  {title:"Other Offences 8", category:"Law of Crimes", link:"other_offences.pdf"},
 
   // LAW OF TORT
   {title:"Tort Notes 1", category:"Law of Tort", link:"pdfs/tort1.pdf"},
