@@ -3,7 +3,7 @@ let pdfData = [
   {
     title: "Legal Reasoning Notes",
     category: "Law",
-    link: "pdfs/legal.pdf"
+    link: "legal.pdf"
   },
   {
     title: "Current Affairs 2026",
