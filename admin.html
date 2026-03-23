@@ -2,19 +2,42 @@
 <html>
 <head>
 <title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<header>
 <h2>Admin Panel</h2>
+</header>
 
-<input placeholder="PDF Title">
-<br><br>
+<div class="card">
 
-<input placeholder="PDF Link">
-<br><br>
+<input id="title" placeholder="PDF Title"><br><br>
+<input id="category" placeholder="Category"><br><br>
+<input id="link" placeholder="PDF Link (pdfs/file.pdf)"><br><br>
 
-<button>Add PDF</button>
+<button onclick="addPDF()">Add PDF</button>
+
+<p id="msg"></p>
+
+</div>
+
+<script>
+function addPDF(){
+  let title = document.getElementById("title").value;
+  let category = document.getElementById("category").value;
+  let link = document.getElementById("link").value;
+
+  let old = JSON.parse(localStorage.getItem("pdfData")) || [];
+
+  old.push({title, category, link});
+
+  localStorage.setItem("pdfData", JSON.stringify(old));
+
+  document.getElementById("msg").innerText = "PDF Added (Only for your device)";
+}
+</script>
 
 </body>
 </html>
