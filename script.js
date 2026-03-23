@@ -1,23 +1,32 @@
-// PDF DATA (EDIT HERE ONLY)
 let pdfData = [
-  {
-    title: "Nature and Stages of Crime",
-    category: "Law",
-    link: "legal.pdf"
-  },
-  {
-    title: "Current Affairs 2026",
-    category: "GK",
-    link: "pdfs/current.pdf"
-  },
-  {
-    title: "Logical Reasoning",
-    category: "Reasoning",
-    link: "pdfs/logical.pdf"
-  }
+  // LAW OF CRIMES
+  {title:"Crimes Notes 1", category:"Law of Crimes", link:"pdfs/crimes1.pdf"},
+  {title:"Crimes Notes 2", category:"Law of Crimes", link:"pdfs/crimes2.pdf"},
+
+  // LAW OF TORT
+  {title:"Tort Notes 1", category:"Law of Tort", link:"pdfs/tort1.pdf"},
+  {title:"Tort Notes 2", category:"Law of Tort", link:"pdfs/tort2.pdf"},
+
+  // CONSTITUTION
+  {title:"Constitution Notes 1", category:"Constitution", link:"pdfs/constitution1.pdf"},
+
+  // CONTRACT ACT
+  {title:"Contract Act Notes 1", category:"Contract", link:"pdfs/contract1.pdf"},
+
+  // MISC
+  {title:"Misc Law Notes", category:"Miscellaneous", link:"pdfs/misc1.pdf"},
+
+  // QUANT
+  {title:"Quant Notes", category:"Quantitative", link:"pdfs/quant1.pdf"},
+
+  // ENGLISH
+  {title:"English Notes", category:"English", link:"pdfs/english1.pdf"},
+
+  // GK
+  {title:"Current Affairs", category:"GK", link:"pdfs/gk1.pdf"}
 ];
 
-// SHOW PDF
+// DISPLAY
 function displayPDF(data){
   let html = "";
 
@@ -31,10 +40,7 @@ function displayPDF(data){
     `;
   });
 
-  let container = document.getElementById("pdfList");
-  if(container){
-    container.innerHTML = html;
-  }
+  document.getElementById("pdfList").innerHTML = html;
 }
 
 // SEARCH
@@ -49,18 +55,71 @@ function searchPDF(){
   displayPDF(filtered);
 }
 
-// MOCK TEST FUNCTION
-function check(ans){
-  let result = document.getElementById("result");
+// FILTER BY CATEGORY
+function filterCategory(cat){
+  let filtered = pdfData.filter(pdf => pdf.category === cat);
+  displayPDF(filtered);
+}
 
-  if(ans === "B"){
-    result.innerHTML = "✅ Correct Answer";
-    result.style.color = "green";
+// LOAD
+displayPDF(pdfData);
+
+// MOCK TEST QUESTIONS
+let questions = [
+  {
+    q: "What is the capital of India?",
+    options: ["Mumbai", "Delhi", "Kolkata", "Chennai"],
+    answer: 1
+  },
+  {
+    q: "IPC stands for?",
+    options: ["Indian Penal Code", "Indian Police Code", "Internal Penal Code", "None"],
+    answer: 0
+  },
+  {
+    q: "Mens Rea means?",
+    options: ["Guilty Mind", "Guilty Act", "Law", "Punishment"],
+    answer: 0
+  }
+];
+
+let currentQ = 0;
+
+// LOAD QUESTION
+function loadQuestion(){
+  let q = questions[currentQ];
+
+  document.getElementById("question").innerText = q.q;
+
+  q.options.forEach((opt, i) => {
+    document.getElementById("opt"+i).innerText = opt;
+  });
+
+  document.getElementById("result").innerText = "";
+}
+
+// CHECK ANSWER
+function checkAnswer(i){
+  if(i === questions[currentQ].answer){
+    document.getElementById("result").innerText = "✅ Correct";
   } else {
-    result.innerHTML = "❌ Wrong Answer";
-    result.style.color = "red";
+    document.getElementById("result").innerText = "❌ Wrong";
   }
 }
 
-// LOAD PDFs (safe)
-displayPDF(pdfData);
+// NEXT QUESTION
+function nextQuestion(){
+  currentQ++;
+
+  if(currentQ < questions.length){
+    loadQuestion();
+  } else {
+    document.getElementById("question").innerText = "🎉 Test Completed!";
+    document.getElementById("result").innerText = "";
+  }
+}
+
+// LOAD FIRST
+if(document.getElementById("question")){
+  loadQuestion();
+}
