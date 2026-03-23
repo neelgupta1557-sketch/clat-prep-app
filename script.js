@@ -1,7 +1,13 @@
 let pdfData = [
   // LAW OF CRIMES
-  {title:"Crimes Notes 1", category:"Law of Crimes", link:"pdfs/crimes1.pdf"},
+  {title:"Nature and Stages of Crime 1", category:"Law of Crimes", link:"legal.pdf"},
   {title:"Crimes Notes 2", category:"Law of Crimes", link:"pdfs/crimes2.pdf"},
+  {title:"Crimes Notes 3", category:"Law of Crimes", link:"pdfs/crimes1.pdf"},
+  {title:"Crimes Notes 4", category:"Law of Crimes", link:"pdfs/crimes2.pdf"},
+  {title:"Crimes Notes 5", category:"Law of Crimes", link:"pdfs/crimes1.pdf"},
+  {title:"Crimes Notes 6", category:"Law of Crimes", link:"pdfs/crimes2.pdf"},
+  {title:"Crimes Notes 7", category:"Law of Crimes", link:"pdfs/crimes1.pdf"},
+  {title:"Crimes Notes 8", category:"Law of Crimes", link:"pdfs/crimes2.pdf"},
 
   // LAW OF TORT
   {title:"Tort Notes 1", category:"Law of Tort", link:"pdfs/tort1.pdf"},
