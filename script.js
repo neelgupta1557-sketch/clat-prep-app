@@ -1,46 +1,66 @@
-const sheetID = "1AkrVuM6bv-yPdLZTODvS0D73leu0wsIdnMHUVQRx5cM";
-const url = `https://opensheet.elk.sh/${sheetID}/Sheet1`;
+// PDF DATA (EDIT HERE ONLY)
+let pdfData = [
+  {
+    title: "Legal Reasoning Notes",
+    category: "Law",
+    link: "pdfs/legal.pdf"
+  },
+  {
+    title: "Current Affairs 2026",
+    category: "GK",
+    link: "pdfs/current.pdf"
+  },
+  {
+    title: "Logical Reasoning",
+    category: "Reasoning",
+    link: "pdfs/logical.pdf"
+  }
+];
 
-let pdfData = [];
-
-fetch(url)
-.then(res => res.json())
-.then(data => {
-
-pdfData = data;
-displayPDF(data);
-
-});
-
+// SHOW PDF
 function displayPDF(data){
+  let html = "";
 
-let html="";
+  data.forEach(pdf => {
+    html += `
+    <div class="card">
+      <h3>${pdf.title}</h3>
+      <p>${pdf.category}</p>
+      <a href="${pdf.link}" target="_blank">Open PDF</a>
+    </div>
+    `;
+  });
 
-data.forEach(pdf => {
-
-html += `
-<div class="card">
-<h3>${pdf.Title}</h3>
-<p>${pdf.Category}</p>
-<a href="${pdf.Link}" target="_blank">Open PDF</a>
-</div>
-`;
-
-});
-
-document.getElementById("pdfList").innerHTML = html;
-
+  let container = document.getElementById("pdfList");
+  if(container){
+    container.innerHTML = html;
+  }
 }
 
+// SEARCH
 function searchPDF(){
+  let input = document.getElementById("search").value.toLowerCase();
 
-let input = document.getElementById("search").value.toLowerCase();
+  let filtered = pdfData.filter(pdf =>
+    pdf.title.toLowerCase().includes(input) ||
+    pdf.category.toLowerCase().includes(input)
+  );
 
-let filtered = pdfData.filter(pdf =>
-pdf.Title.toLowerCase().includes(input) ||
-pdf.Category.toLowerCase().includes(input)
-);
-
-displayPDF(filtered);
-
+  displayPDF(filtered);
 }
+
+// MOCK TEST FUNCTION
+function check(ans){
+  let result = document.getElementById("result");
+
+  if(ans === "B"){
+    result.innerHTML = "✅ Correct Answer";
+    result.style.color = "green";
+  } else {
+    result.innerHTML = "❌ Wrong Answer";
+    result.style.color = "red";
+  }
+}
+
+// LOAD PDFs (safe)
+displayPDF(pdfData);
