@@ -9,9 +9,20 @@ let pdfData = [
   {title:"Offences Against Property 7", category:"Law of Crimes", link:"offences_against_property.pdf"},
   {title:"Other Offences 8", category:"Law of Crimes", link:"other_offences.pdf"},
 
-  // LAW OF TORT
-  {title:"Tort Notes 1", category:"Law of Tort", link:"pdfs/tort1.pdf"},
-  {title:"Tort Notes 2", category:"Law of Tort", link:"pdfs/tort2.pdf"},
+  // LAW OF TORTS
+  {title:"Nature of Torts 1", category:"Law of Tort", link:"pdfs/tort1.pdf"},
+  {title:"Liability Based On Torts 2", category:"Law of Tort", link:"pdfs/tort2.pdf"},
+{title:"Vicarious Liability 3", category:"Law of Tort", link:"pdfs/tort1.pdf"},
+  {title:"Trespass 4", category:"Law of Tort", link:"pdfs/tort2.pdf"},
+{title:"Negligence 5", category:"Law of Tort", link:"pdfs/tort1.pdf"},
+  {title:"Defamation 6", category:"Law of Tort", link:"pdfs/tort2.pdf"},
+{title:"Malicious Prosecution 7", category:"Law of Tort", link:"pdfs/tort1.pdf"},
+  {title:"Nuisance 8", category:"Law of Tort", link:"pdfs/tort2.pdf"},
+{title:"Other Kind Of Liability In Tort 9", category:"Law of Tort", link:"pdfs/tort1.pdf"},
+  {title:"Economic Trots 10", category:"Law of Tort", link:"pdfs/tort2.pdf"},
+{title:"New And Emergent Torts 11", category:"Law of Tort", link:"pdfs/tort1.pdf"},
+  {title:"Remedies 12", category:"Law of Tort", link:"pdfs/tort2.pdf"},
+{title:"General Defences 13", category:"Law of Tort", link:"pdfs/tort1.pdf"},
 
   // CONSTITUTION
   {title:"Constitution Notes 1", category:"Constitution", link:"pdfs/constitution1.pdf"},
