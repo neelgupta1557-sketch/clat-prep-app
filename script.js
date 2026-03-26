@@ -10,12 +10,12 @@ let pdfData = [
   {title:"Other Offences 8", category:"Law of Crimes", link:"other_offences.pdf"},
 
   // LAW OF TORTS
-  {title:"Nature of Torts 1", category:"Law of Tort", link:"pdfs/tort1.pdf"},
-  {title:"Liability Based On Torts 2", category:"Law of Tort", link:"pdfs/tort2.pdf"},
-{title:"Vicarious Liability 3", category:"Law of Tort", link:"pdfs/tort1.pdf"},
-  {title:"Trespass 4", category:"Law of Tort", link:"pdfs/tort2.pdf"},
-{title:"Negligence 5", category:"Law of Tort", link:"pdfs/tort1.pdf"},
-  {title:"Defamation 6", category:"Law of Tort", link:"pdfs/tort2.pdf"},
+  {title:"Nature of Torts 1", category:"Law of Tort", link:"nature_of_torts.pdf"},
+  {title:"Liability Based On Torts 2", category:"Law of Tort", link:"liability_based_on_tort.pdf"},
+{title:"Vicarious Liability 3", category:"Law of Tort", link:"vicarious_liability.pdf"},
+  {title:"Trespass 4", category:"Law of Tort", link:"trespass.pdf"},
+{title:"Negligence 5", category:"Law of Tort", link:"negligence.pdf"},
+  {title:"Defamation 6", category:"Law of Tort", link:"defamation.pdf"},
 {title:"Malicious Prosecution 7", category:"Law of Tort", link:"pdfs/tort1.pdf"},
   {title:"Nuisance 8", category:"Law of Tort", link:"pdfs/tort2.pdf"},
 {title:"Other Kind Of Liability In Tort 9", category:"Law of Tort", link:"pdfs/tort1.pdf"},
