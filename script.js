@@ -49,12 +49,18 @@ function displayPDF(data){
 
   data.forEach(pdf => {
     html += `
-    <div class="card">
-      <h3>${pdf.title}</h3>
-      <p>${pdf.category}</p>
-      <a href="${pdf.link}" target="_blank">Open PDF</a>
-    </div>
-    `;
+<div class="card">
+  <h3>${pdf.title}</h3>
+  <p>${pdf.category}</p>
+
+  <a href="${pdf.link}" target="_blank">📖 Open PDF</a>
+
+  <br><br>
+
+  <a href="${pdf.link}" download class="download-btn">⬇️ Download PDF</a>
+
+</div>
+`;
   });
 
   document.getElementById("pdfList").innerHTML = html;
