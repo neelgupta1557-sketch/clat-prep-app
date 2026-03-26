@@ -38,3 +38,16 @@ padding:20px;
 background:#222;
 color:white;
 }
+
+.download-btn{
+  display:inline-block;
+  padding:8px 12px;
+  background:#1a73e8;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+}
+
+.download-btn:hover{
+  background:#1557b0;
+}
