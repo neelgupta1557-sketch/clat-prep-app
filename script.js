@@ -1,7 +1,7 @@
 let pdfData = [
   // LAW OF CRIMES
-  {title:"Nature and Stages of Crime 1", category:"Law of Crimes", link:"legal.pdf",}
-  {title:"Punishment in IPC 2", category:"Law of Crimes", link:"punishment_in_ipc.pdf",}
+  {title:"Nature and Stages of Crime 1", category:"Law of Crimes", link:"legal.pdf"},
+  {title:"Punishment in IPC 2", category:"Law of Crimes", link:"punishment_in_ipc.pdf"},
   {title:"Elements of Criminal liability 3", category:"Law of Crimes", link:"elements_of_criminal_liability.pdf"},
   {title:"Joint Liability 4", category:"Law of Crimes", link:"joint_liability.pdf"},
   {title:"General Exceptions 5", category:"Law of Crimes", link:"general_exceptions.pdf"},
@@ -12,17 +12,17 @@ let pdfData = [
   // LAW OF TORTS
   {title:"Nature of Torts 1", category:"Law of Tort", link:"nature_of_torts.pdf"},
   {title:"Liability Based On Torts 2", category:"Law of Tort", link:"liability_based_on_tort.pdf"},
-{title:"Vicarious Liability 3", category:"Law of Tort", link:"vicarious_liability.pdf"},
+  {title:"Vicarious Liability 3", category:"Law of Tort", link:"vicarious_liability.pdf"},
   {title:"Trespass 4", category:"Law of Tort", link:"trespass.pdf"},
-{title:"Negligence 5", category:"Law of Tort", link:"negligence.pdf"},
+  {title:"Negligence 5", category:"Law of Tort", link:"negligence.pdf"},
   {title:"Defamation 6", category:"Law of Tort", link:"defamation.pdf"},
-{title:"Malicious Prosecution 7", category:"Law of Tort", link:"pdfs/tort1.pdf"},
+  {title:"Malicious Prosecution 7", category:"Law of Tort", link:"pdfs/tort1.pdf"},
   {title:"Nuisance 8", category:"Law of Tort", link:"pdfs/tort2.pdf"},
-{title:"Other Kind Of Liability In Tort 9", category:"Law of Tort", link:"pdfs/tort1.pdf"},
+  {title:"Other Kind Of Liability In Tort 9", category:"Law of Tort", link:"pdfs/tort1.pdf"},
   {title:"Economic Trots 10", category:"Law of Tort", link:"pdfs/tort2.pdf"},
-{title:"New And Emergent Torts 11", category:"Law of Tort", link:"pdfs/tort1.pdf"},
+  {title:"New And Emergent Torts 11", category:"Law of Tort", link:"pdfs/tort1.pdf"},
   {title:"Remedies 12", category:"Law of Tort", link:"pdfs/tort2.pdf"},
-{title:"General Defences 13", category:"Law of Tort", link:"pdfs/tort1.pdf"},
+  {title:"General Defences 13", category:"Law of Tort", link:"pdfs/tort1.pdf"},
 
   // CONSTITUTION
   {title:"Constitution Notes 1", category:"Constitution", link:"pdfs/constitution1.pdf"},
