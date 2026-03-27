@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="login-box">
+  <h2>🔐 Login</h2>
+
+  <input type="text" id="username" placeholder="Enter Username"><br><br>
+  <input type="password" id="password" placeholder="Enter Password"><br><br>
+
+  <button onclick="login()">Login</button>
+  <button onclick="signup()">Sign Up</button>
+
+  <p id="msg"></p>
+</div>
+
+<script>
+
+function signup(){
+  let user = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+
+  localStorage.setItem("user", user);
+  localStorage.setItem("pass", pass);
+
+  document.getElementById("msg").innerText = "✅ Account Created!";
+}
+
+function login(){
+  let user = document.getElementById("username").value;
+  let pass = document.getElementById("password").value;
+
+  let savedUser = localStorage.getItem("user");
+  let savedPass = localStorage.getItem("pass");
+
+  if(user === savedUser && pass === savedPass){
+    window.location.href = "pdfs.html";
+  } else {
+    document.getElementById("msg").innerText = "❌ Wrong Credentials";
+  }
+}
+
+</script>
+
+</body>
+</html>
