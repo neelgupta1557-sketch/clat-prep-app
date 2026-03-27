@@ -2,7 +2,8 @@ let pdfData = [
   // LAW OF CRIMES
   {title:"Nature and Stages of Crime 1", category:"Law of Crimes", link:"legal.pdf",
 type: "clat-notes" },
-  {title:"Punishment in IPC 2", category:"Law of Crimes", link:"punishment_in_ipc.pdf"},
+  {title:"Punishment in IPC 2", category:"Law of Crimes", link:"punishment_in_ipc.pdf",
+type: "LAW OF CRIMES" },
   {title:"Elements of Criminal liability 3", category:"Law of Crimes", link:"elements_of_criminal_liability.pdf"},
   {title:"Joint Liability 4", category:"Law of Crimes", link:"joint_liability.pdf"},
   {title:"General Exceptions 5", category:"Law of Crimes", link:"general_exceptions.pdf"},
