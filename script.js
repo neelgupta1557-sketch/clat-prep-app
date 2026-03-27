@@ -1,6 +1,7 @@
 let pdfData = [
   // LAW OF CRIMES
-  {title:"Nature and Stages of Crime 1", category:"Law of Crimes", link:"legal.pdf"},
+  {title:"Nature and Stages of Crime 1", category:"Law of Crimes", link:"legal.pdf",
+type: "clat-notes" },
   {title:"Punishment in IPC 2", category:"Law of Crimes", link:"punishment_in_ipc.pdf"},
   {title:"Elements of Criminal liability 3", category:"Law of Crimes", link:"elements_of_criminal_liability.pdf"},
   {title:"Joint Liability 4", category:"Law of Crimes", link:"joint_liability.pdf"},
@@ -145,4 +146,14 @@ function nextQuestion(){
 // LOAD FIRST
 if(document.getElementById("question")){
   loadQuestion();
+}
+
+const params = new URLSearchParams(window.location.search);
+const type = params.get('type');
+
+if(type){
+  const filtered = pdfData.filter(pdf => pdf.type === type);
+  displayPDF(filtered);
+} else {
+  displayPDF(pdfData);
 }
