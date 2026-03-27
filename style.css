@@ -121,3 +121,25 @@ button:hover {
   color: #555;
   font-size: 14px;
 }
+
+.login-box {
+  width: 90%;
+  max-width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-box input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.login-box button {
+  margin: 5px;
+}
