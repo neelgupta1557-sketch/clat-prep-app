@@ -16,6 +16,7 @@ let pdfData = [
   {title:"Trespass 4", category:"Law of Tort", link:"trespass.pdf"},
   {title:"Negligence 5", category:"Law of Tort", link:"negligence.pdf"},
   {title:"Defamation 6", category:"Law of Tort", link:"defamation.pdf"},
+    {title:"Malicious prosecution 7", category:"Law of Tort", link:"malicious_prosecution.pdf"},
   {title:"Nuisance 8", category:"Law of Tort", link:"nuisance.pdf"},
   {title:"Other Kind Of Liability In Tort 9", category:"Law of Tort", link:"pdfs/tort1.pdf"},
   {title:"Economic Trots 10", category:"Law of Tort", link:"pdfs/tort2.pdf"},
