@@ -16,7 +16,7 @@ let pdfData = [
   {title:"Trespass 4", category:"Law of Tort", link:"trespass.pdf"},
   {title:"Negligence 5", category:"Law of Tort", link:"negligence.pdf"},
   {title:"Defamation 6", category:"Law of Tort", link:"defamation.pdf"},
-    {title:"Malicious prosecution 7", category:"Law of Tort", link:"malicious_prosecution.pdf"},
+  {title:"Malicious prosecution 7", category:"Law of Tort", link:"malicious_prosecution.pdf"},
   {title:"Nuisance 8", category:"Law of Tort", link:"nuisance.pdf"},
   {title:"Other Kind Of Liability In Tort 9", category:"Law of Tort", link:"other_kind_of_liability_torts.pdf"},
   {title:"Economic Trots 10", category:"Law of Tort", link:"economic.torts.pdf"},
@@ -24,22 +24,9 @@ let pdfData = [
   {title:"Remedies 12", category:"Law of Tort", link:"remidies.pdf"},
   {title:"General Defences 13", category:"Law of Tort", link:"general_defences.pdf"},
 
-  // CONSTITUTION
-  {title:"Constitution Notes 1", category:"Constitution", link:"pdfs/constitution1.pdf"},
-
-  // CONTRACT ACT
-  {title:"Contract Act Notes 1", category:"Contract", link:"pdfs/contract1.pdf"},
-
-  // MISC
-  {title:"Misc Law Notes", category:"Miscellaneous", link:"pdfs/misc1.pdf"},
-
-  // QUANT
+  // OTHER
   {title:"Quant Notes", category:"Quantitative", link:"pdfs/quant1.pdf"},
-
-  // ENGLISH
   {title:"English Notes", category:"English", link:"pdfs/english1.pdf"},
-
-  // GK
   {title:"Current Affairs", category:"GK", link:"pdfs/gk1.pdf"}
 ];
 
@@ -54,9 +41,7 @@ function displayPDF(data){
   <p>${pdf.category}</p>
 
   <a href="${pdf.link}" target="_blank">📖 Open PDF</a>
-
   <br><br>
-
   <a href="${pdf.link}" download class="download-btn">⬇️ Download PDF</a>
 
 </div>
@@ -78,16 +63,24 @@ function searchPDF(){
   displayPDF(filtered);
 }
 
-// FILTER BY CATEGORY
+// FILTER BUTTON (optional)
 function filterCategory(cat){
   let filtered = pdfData.filter(pdf => pdf.category === cat);
   displayPDF(filtered);
 }
 
-// LOAD
-displayPDF(pdfData);
+// 🔥 AUTO FILTER FROM CATEGORY PAGE
+const params = new URLSearchParams(window.location.search);
+const selectedClat = params.get("clat");
 
-// MOCK TEST QUESTIONS
+if(selectedClat){
+  let filtered = pdfData.filter(pdf => pdf.category === selectedClat);
+  displayPDF(filtered);
+} else {
+  displayPDF(pdfData);
+}
+
+// MOCK TEST
 let questions = [
   {
     q: "What is the capital of India?",
@@ -108,7 +101,6 @@ let questions = [
 
 let currentQ = 0;
 
-// LOAD QUESTION
 function loadQuestion(){
   let q = questions[currentQ];
 
@@ -121,7 +113,6 @@ function loadQuestion(){
   document.getElementById("result").innerText = "";
 }
 
-// CHECK ANSWER
 function checkAnswer(i){
   if(i === questions[currentQ].answer){
     document.getElementById("result").innerText = "✅ Correct";
@@ -130,7 +121,6 @@ function checkAnswer(i){
   }
 }
 
-// NEXT QUESTION
 function nextQuestion(){
   currentQ++;
 
@@ -142,11 +132,11 @@ function nextQuestion(){
   }
 }
 
-// LOAD FIRST
 if(document.getElementById("question")){
   loadQuestion();
 }
 
+// SPLASH
 setTimeout(() => {
   let splash = document.getElementById("splash");
   if(splash) splash.style.display = "none";
