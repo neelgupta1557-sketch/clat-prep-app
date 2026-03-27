@@ -137,7 +137,7 @@ if(document.getElementById("question")){
 }
 
 // SPLASH
-setTimeout(() => {
+window.onload = function(){
   let splash = document.getElementById("splash");
   if(splash) splash.style.display = "none";
-}, 2000);
+};
