@@ -20,9 +20,9 @@ let pdfData = [
   {title:"Nuisance 8", category:"Law of Tort", link:"nuisance.pdf"},
   {title:"Other Kind Of Liability In Tort 9", category:"Law of Tort", link:"other_kind_of_liability_torts.pdf"},
   {title:"Economic Trots 10", category:"Law of Tort", link:"economic.torts.pdf"},
-  {title:"New And Emergent Torts 11", category:"Law of Tort", link:"pdfs/tort1.pdf"},
-  {title:"Remedies 12", category:"Law of Tort", link:"pdfs/tort2.pdf"},
-  {title:"General Defences 13", category:"Law of Tort", link:"pdfs/tort1.pdf"},
+  {title:"New And Emergent Torts 11", category:"Law of Tort", link:"new_and_emergent_torts.pdf"},
+  {title:"Remedies 12", category:"Law of Tort", link:"remidies.pdf"},
+  {title:"General Defences 13", category:"Law of Tort", link:"general_defences.pdf"},
 
   // CONSTITUTION
   {title:"Constitution Notes 1", category:"Constitution", link:"pdfs/constitution1.pdf"},
