@@ -146,3 +146,8 @@ function nextQuestion(){
 if(document.getElementById("question")){
   loadQuestion();
 }
+
+setTimeout(() => {
+  let splash = document.getElementById("splash");
+  if(splash) splash.style.display = "none";
+}, 2000);
