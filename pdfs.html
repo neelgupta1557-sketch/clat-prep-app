@@ -15,11 +15,6 @@ if(localStorage.getItem("user") === null){
 
 <div id="splash">🚀 Loading App...</div>
 
-<script>
-const params = new URLSearchParams(window.location.search);
-const selectedClat = params.get("clat");
-</script>
-
 <header>
   <h2>📚 CLAT Study Material</h2>
 </header>
@@ -28,19 +23,21 @@ const selectedClat = params.get("clat");
 
 <br><br>
 
-<!-- CATEGORY BUTTONS -->
+<!-- ✅ NEW CATEGORY BUTTONS -->
 <div class="menu">
 
-<button onclick="filterCategory('Law of Crimes')">⚖️ Law of Crimes</button>
-<button onclick="filterCategory('Law of Tort')">📜 Law of Tort</button>
-<button onclick="filterCategory('Constitution')">🏛 Constitution</button>
-<button onclick="filterCategory('Contract')">🤝 Contract</button>
-<button onclick="filterCategory('Miscellaneous')">📂 Misc</button>
-<button onclick="filterCategory('Quantitative')">📊 Quant</button>
-<button onclick="filterCategory('English')">📖 English</button>
-<button onclick="filterCategory('GK')">🌍 GK</button>
+<button onclick="filterCategory('Legal Reasoning')">⚖️ Legal Reasoning</button>
+<button onclick="filterCategory('Logical Reasoning')">🧠 Logical Reasoning</button>
+<button onclick="filterCategory('Quantitative Techniques')">📊 Quant</button>
+<button onclick="filterCategory('Previous Year Papers')">📄 PYQs</button>
+<button onclick="filterCategory('CLAT Mock Test')">📝 CLAT Mock</button>
+<button onclick="filterCategory('CLAT Sample Paper')">📘 CLAT Sample</button>
+<button onclick="filterCategory('AILET Mock Test')">📝 AILET Mock</button>
+<button onclick="filterCategory('AILET PYQs')">📄 AILET PYQs</button>
+<button onclick="filterCategory('SLAT Notes')">📚 SLAT Notes</button>
+<button onclick="filterCategory('SLAT Mock Test')">📝 SLAT Mock</button>
 
-<button onclick="displayPDF(pdfData)">Show All</button>
+<button onclick="displayPDF(pdfData)">🔄 Show All</button>
 
 </div>
 
