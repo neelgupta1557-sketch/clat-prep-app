@@ -3,7 +3,6 @@ let pdfData = [
   // LEGAL REASONING (ALL 8)
   {title:"Nature and Stages of Crime", category:"Legal Reasoning", sub:"Law of Crimes", link:"legal.pdf"},  
   {title:"Punishment in IPC", category:"Legal Reasoning", sub:"Law of Crimes", link:"punishment_in_ipc.pdf"},  
-  {title:"Elements of Criminal Liability", category:"Legal Reasoning", sub:"Law of Crimes", link:"elements_of_criminal_liability.pdf"},  
   {title:"Joint Liability", category:"Legal Reasoning", sub:"Law of Crimes", link:"joint_liability.pdf"},  
   {title:"General Exceptions", category:"Legal Reasoning", sub:"Law of Crimes", link:"general_exceptions.pdf"},  
   {title:"Offences Affecting the Human Body", category:"Legal Reasoning", sub:"Law of Crimes", link:"offences_affecting_the_human_body.pdf"},  
