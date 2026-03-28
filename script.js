@@ -2,7 +2,7 @@ let pdfData = [
 
   // LEGAL REASONING (ALL 8)
   {title:"Nature and Stages of Crime", category:"Legal Reasoning", sub:"Law of Crimes", link:"legal.pdf"},  
-  {title:"Punishment in IPC", category:"Legal Reasoning", sub:"Law of Crimes", link:"pdfs/punishment_in_ipc.pdf"},  
+  {title:"Punishment in IPC", category:"Legal Reasoning", sub:"Law of Crimes", link:"punishment_in_ipc.pdf"},  
   {title:"Negligence", category:"Legal Reasoning", sub:"Law of Tort", link:"pdfs/negligence.pdf"},  
   {title:"Defamation", category:"Legal Reasoning", sub:"Law of Tort", link:"pdfs/defamation.pdf"},  
   {title:"Constitution Notes", category:"Legal Reasoning", sub:"Constitution", link:"pdfs/constitution1.pdf"},  
