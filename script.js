@@ -29,7 +29,7 @@ let pdfData = [
   {title:"Emergency Provisions in India", category:"Legal Reasoning", sub:"Constitution of India", link:"emergency_provisions_in_india.pdf"},  
   {title:"State Legislature", category:"Legal Reasoning", sub:"Constitution of India", link:"state_legislature.pdf"},  
   {title:"Governor", category:"Legal Reasoning", sub:"Constitution of India", link:"governor.pdf"},  
-  {title:"Local-Self Governance", category:"Legal Reasoning", sub:"Constitution of India", link:"local-self_governance.pdf"},  
+  {title:"Local-Self Governance", category:"Legal Reasoning", sub:"Constitution of India", link:"local_self_governance.pdf"},  
   {title:"Judiciary", category:"Legal Reasoning", sub:"Constitution of India", link:"judiciary.pdf"},  
   {title:"Union Territories", category:"Legal Reasoning", sub:"Constitution of India", link:"union_territories.pdf"},   
   {title:"Government Bodies", category:"Legal Reasoning", sub:"Constitution of India", link:"government_bodies.pdf"},  
