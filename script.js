@@ -18,6 +18,8 @@ let pdfData = [
   {title:"Nuisance", category:"Legal Reasoning", sub:"Law of Tort", link:"nuisance.pdf"},  
   {title:"Other Kind of Liability Torts", category:"Legal Reasoning", sub:"Law of Tort", link:"other_kind_of_liability_torts.pdf"},  
   {title:"Economic Trots", category:"Legal Reasoning", sub:"Law of Tort", link:"economic.torts.pdf"},  
+  {title:"General Defences", category:"Legal Reasoning", sub:"Law of Tort", link:"general_difences.pdf"},  
+  {title:"Remidies", category:"Legal Reasoning", sub:"Law of Tort", link:"remidies.pdf"},  
   {title:"Constitution Notes", category:"Legal Reasoning", sub:"Constitution", link:"pdfs/constitution1.pdf"},  
   {title:"Contract Act", category:"Legal Reasoning", sub:"Contract", link:"pdfs/contract1.pdf"},  
   {title:"Misc Law", category:"Legal Reasoning", sub:"Miscellaneous", link:"pdfs/misc1.pdf"},  
