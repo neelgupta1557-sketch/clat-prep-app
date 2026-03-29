@@ -21,7 +21,7 @@ let pdfData = [
   {title:"General Defences", category:"Legal Reasoning", sub:"Law of Tort", link:"general_defences.pdf"},  
   {title:"Remidies", category:"Legal Reasoning", sub:"Law of Tort", link:"remidies.pdf"},  
   {title:"Framing of Indian Constitution", category:"Legal Reasoning", sub:"Constitution of India", link:"framing_of_indian_constitution.pdf"},   
-  {title:"Parts & Schedules of Indian Constitution", category:"Legal Reasoning", sub:"Constitution of India", link:"parts_&_schedules_of_indian_constitution. pdf"},  
+  {title:"Parts & Schedules of Indian Constitution", category:"Legal Reasoning", sub:"Constitution of India", link:"pdfs/constitution.pdf"},  
   {title:"Preamble union & its territories citizenship", category:"Legal Reasoning", sub:"Constitution of India", link:"preamble_union_&_its_territories_citizenship.pdf"},  
   {title:"Fundamental Rights & Duties", category:"Legal Reasoning", sub:"Constitution of India", link:"fundamental_rights_&_duties.pdf"},  
   {title:"Union Executive", category:"Legal Reasoning", sub:"Constitution of India", link:"union_executive.pdf"},  
