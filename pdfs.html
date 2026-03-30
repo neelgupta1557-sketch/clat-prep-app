@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>CLAT PDFs</title>
-<link rel="stylesheet" href="style.css">
+  <title>CLAT PDFs</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,19 +26,13 @@ if(localStorage.getItem("user") === null){
 
 <br><br>
 
-<!-- ✅ NEW CATEGORY BUTTONS -->
 <div class="menu">
 
-<button onclick="filterCategory('Legal Reasoning')">⚖️ Legal Reasoning</button>
-<button onclick="filterCategory('Logical Reasoning')">🧠 Logical Reasoning</button>
+<button onclick="filterCategory('Legal Reasoning')">⚖️ Legal</button>
+<button onclick="filterCategory('Logical Reasoning')">🧠 Logical</button>
 <button onclick="filterCategory('Quantitative Techniques')">📊 Quant</button>
 <button onclick="filterCategory('Previous Year Papers')">📄 PYQs</button>
 <button onclick="filterCategory('CLAT Mock Test')">📝 CLAT Mock</button>
-<button onclick="filterCategory('CLAT Sample Paper')">📘 CLAT Sample</button>
-<button onclick="filterCategory('AILET Mock Test')">📝 AILET Mock</button>
-<button onclick="filterCategory('AILET PYQs')">📄 AILET PYQs</button>
-<button onclick="filterCategory('SLAT Notes')">📚 SLAT Notes</button>
-<button onclick="filterCategory('SLAT Mock Test')">📝 SLAT Mock</button>
 
 <button onclick="displayPDF(pdfData)">🔄 Show All</button>
 
@@ -43,7 +40,7 @@ if(localStorage.getItem("user") === null){
 
 <br><br>
 
-<div id="pdfList" class="menu"></div>
+<div id="pdfList"></div>
 
 <script src="script.js"></script>
 
