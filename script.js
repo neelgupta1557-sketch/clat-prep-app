@@ -1,7 +1,7 @@
 let pdfData = [    
 
   // LEGAL REASONING
-  {title:"Nature and Stages of Crime", category:"Legal Reasoning", sub:"Law of Crimes", type:"github", link:"pdfs/legal.pdf"},    
+  {title:"Nature and Stages of Crime", category:"Legal Reasoning", sub:"Law of Crimes", type:"drive", fileId:"1UTKR6cDaW73yaCqeHfIglgrIpwVFXgxX"},    
   {title:"Punishment in IPC", category:"Legal Reasoning", sub:"Law of Crimes", type:"github", link:"pdfs/punishment_in_ipc.pdf"},    
   {title:"Joint Liability", category:"Legal Reasoning", sub:"Law of Crimes", type:"github", link:"pdfs/joint_liability.pdf"},    
   {title:"General Exceptions", category:"Legal Reasoning", sub:"Law of Crimes", type:"github", link:"pdfs/general_exceptions.pdf"},    
