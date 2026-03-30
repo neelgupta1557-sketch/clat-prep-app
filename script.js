@@ -42,10 +42,12 @@ let pdfData = [
 
   {title:"Contract Act", category:"Legal Reasoning", sub:"Contract", type:"github", link:"pdfs/contract1.pdf"},    
   {title:"Misc Law", category:"Legal Reasoning", sub:"Miscellaneous", type:"github", link:"pdfs/misc1.pdf"},    
+
+  // 👉 DRIVE (yahan apne ID daal)
   {title:"Legal English", category:"Legal Reasoning", sub:"English", type:"drive", fileId:"PASTE_ID"},    
   {title:"Legal GK", category:"Legal Reasoning", sub:"GK", type:"drive", fileId:"PASTE_ID"},    
 
-  // OTHER SECTIONS
+  // OTHER
   {title:"Logical Notes", category:"Logical Reasoning", sub:"Logical", type:"github", link:"pdfs/logical1.pdf"},    
   {title:"Quant Notes", category:"Quantitative Techniques", sub:"Math", type:"github", link:"pdfs/quant1.pdf"},    
   {title:"CLAT PYQ", category:"Previous Year Papers", sub:"CLAT", type:"github", link:"pdfs/pyq1.pdf"},    
@@ -59,7 +61,7 @@ let pdfData = [
 ];
 
 
-// 🔥 SAME LOGIC (no change)
+// 🔥 DISPLAY
 function displayPDF(data){    
   let html = "";    
 
@@ -76,7 +78,8 @@ function displayPDF(data){
         downloadLink = pdf.link;
       } 
       else if(pdf.type === "drive"){
-        openLink = `https://drive.google.com/file/d/${pdf.fileId}/preview`;
+        // 🔥 FINAL FIX (NO LOGIN ISSUE)
+        openLink = `https://drive.google.com/uc?export=view&id=${pdf.fileId}`;
         downloadLink = `https://drive.google.com/uc?export=download&id=${pdf.fileId}`;
       }
 
@@ -85,9 +88,13 @@ function displayPDF(data){
   <h3>${pdf.title}</h3>    
   <p>${pdf.category} - ${pdf.sub}</p>    
 
-  <a href="${openLink}" target="_blank">📖 Open</a>    
-  <br><br>    
-  <a href="${downloadLink}" class="download-btn">⬇️ Download</a>    
+  <a href="${openLink}" target="_blank" rel="noopener noreferrer">
+    <button>📖 Open</button>
+  </a>    
+
+  <a href="${downloadLink}">
+    <button class="download-btn">⬇️ Download</button>
+  </a>    
 </div>`;
     });
   }
@@ -95,6 +102,8 @@ function displayPDF(data){
   document.getElementById("pdfList").innerHTML = html;    
 }
 
+
+// SEARCH
 function searchPDF(){    
   let input = document.getElementById("search").value.toLowerCase();    
   let filtered = pdfData.filter(pdf =>    
@@ -105,13 +114,19 @@ function searchPDF(){
   displayPDF(filtered);    
 }
 
+
+// FILTER
 function filterCategory(cat){    
   let filtered = pdfData.filter(pdf => pdf.category === cat);    
   displayPDF(filtered);    
 }
 
+
+// LOAD
 displayPDF(pdfData);
 
+
+// SPLASH
 setTimeout(() => {    
   let splash = document.getElementById("splash");    
   if(splash) splash.style.display = "none";  
