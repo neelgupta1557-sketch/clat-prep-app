@@ -23,7 +23,7 @@ let pdfData = [
   {title:"Remidies", category:"Legal Reasoning", sub:"Law of Tort", type:"github", link:"pdfs/remidies.pdf"},    
 
   {title:"Framing of Indian Constitution", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/framing_of_indian_constitution.pdf"},     
-  {title:"Parts & Schedules of Indian Constitution", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/constitution.pdf"},    
+  {title:"Parts & Schedules of Indian Constitution", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/parts_and_schedules_of_indian_constituion.pdf"},    
   {title:"Preamble union & its territories citizenship", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/preamble_union_&_its_territories_citizenship.pdf"},    
   {title:"Fundamental Rights & Duties", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/fundamental_rights_&_duties.pdf"},    
   {title:"Union Executive", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/union_executive.pdf"},    
