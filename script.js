@@ -25,7 +25,7 @@ let pdfData = [
   {title:"Framing of Indian Constitution", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/framing_of_indian_constitution.pdf"},     
   {title:"Parts & Schedules of Indian Constitution", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/parts_and_schedules_of_indian_constituion.pdf"},    
   {title:"Preamble union & its territories citizenship", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/preamble_union_&_its_territories_citizenship.pdf"},    
-  {title:"Fundamental Rights & Duties", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/fundamental_rights_&_duties.pdf"},    
+  {title:"Fundamental Rights & Duties", category:"Legal Reasoning", sub:"Constitution of India", type:"drive", fileId:"https://drive.google.com/file/d/1ual18eHk4sZshQjJjwZc76R5ApQYbNgo/view?usp=drivesdk"},    
   {title:"Union Executive", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/union_executive.pdf"},    
   {title:"Parliament", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/parliament.pdf"},    
   {title:"Emergency Provisions in India", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/emergency_provisions_in_india.pdf"},    
