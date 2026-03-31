@@ -92,7 +92,7 @@ function displayPDF(data){
     <button>📖 Open</button>
   </a>    
 
-  <a href="${downloadLink}">
+  <a href="${downloadLink}" download>
     <button class="download-btn">⬇️ Download</button>
   </a>    
 </div>`;
