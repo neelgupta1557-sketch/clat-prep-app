@@ -144,3 +144,36 @@ setTimeout(() => {
   let splash = document.getElementById("splash");    
   if(splash) splash.style.display = "none";  
 }, 2000);
+
+// 👤 Get current user
+function getCurrentUser(){
+  return localStorage.getItem("user");
+}
+
+// 👋 Welcome message (agar element exist kare)
+function showUser(){
+  let user = getCurrentUser();
+  let el = document.getElementById("welcomeUser");
+
+  if(el && user){
+    el.innerText = "Welcome, " + user + " 👋";
+  }
+}
+
+// 🔓 Logout function
+function logout(){
+  localStorage.removeItem("user");
+  localStorage.removeItem("pass");
+
+  window.location.href = "login.html";
+}
+
+// 🔐 Extra protection (agar direct script load ho)
+if(window.location.pathname.includes("pdfs.html")){
+  if(!getCurrentUser()){
+    window.location.href = "login.html";
+  }
+}
+
+// 👤 Auto run
+showUser();
