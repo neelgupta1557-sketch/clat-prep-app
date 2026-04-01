@@ -7,7 +7,7 @@ let pdfData = [
   {title:"General Exceptions", category:"Legal Reasoning", sub:"Law of Crimes", type:"github", link:"pdfs/general_exceptions.pdf"},    
   {title:"Offences Affecting the Human Body", category:"Legal Reasoning", sub:"Law of Crimes", type:"github", link:"pdfs/offences_affecting_the_human_body.pdf"},    
   {title:"Offences Against Property", category:"Legal Reasoning", sub:"Law of Crimes", type:"github", link:"pdfs/offences_against_property.pdf"},    
-  {title:"Other Offences", category:"Legal Reasoning", sub:"Law of Crimes", type:"github", link:"pdfs/other_offences.pdf"},    
+  {title:"Other Offences", category:"Legal Reasoning", sub:"Law of Crimes", type:"github", link:"other_offences.pdf"},    
 
   {title:"Nature of Torts", category:"Legal Reasoning", sub:"Law of Tort", type:"github", link:"pdfs/nature_of_torts.pdf"},    
   {title:"Liability Based on Tort", category:"Legal Reasoning", sub:"Law of Tort", type:"github", link:"pdfs/liability_based_on_tort.pdf"},    
