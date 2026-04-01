@@ -11,6 +11,7 @@
 <body>
 
 <script>
+// 🔐 Login check
 if(localStorage.getItem("user") === null){
   window.location.href = "login.html";
 }
@@ -20,6 +21,9 @@ if(localStorage.getItem("user") === null){
 
 <header>
   <h2>📚 CLAT Study Material</h2>
+  
+  <!-- 👤 Username show -->
+  <p id="welcomeUser" style="font-size:14px;"></p>
 </header>
 
 <input type="text" id="search" placeholder="Search PDF..." onkeyup="searchPDF()">
@@ -54,12 +58,24 @@ if(localStorage.getItem("user") === null){
 
 <script src="script.js"></script>
 
+<!-- 🔻 Bottom Navigation -->
 <div class="bottom-nav">
   <a href="#">🏠 Home</a>
   <a href="#">📚 Study</a>
   <a href="#">📝 Mock</a>
-  <a href="#">👤 Profile</a>
+  <a href="#" onclick="goProfile()">👤 Profile</a>
 </div>
+
+<script>
+// 👤 Show username
+let user = localStorage.getItem("user");
+document.getElementById("welcomeUser").innerText = "Welcome, " + user + " 👋";
+
+// 🔀 Go to profile page
+function goProfile(){
+  window.location.href = "profile.html";
+}
+</script>
 
 </body>
 </html>
