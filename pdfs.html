@@ -24,6 +24,12 @@ if(localStorage.getItem("user") === null){
   
   <!-- 👤 Username show -->
   <p id="welcomeUser" style="font-size:14px;"></p>
+
+  <!-- 🚪 Logout Button -->
+  <button onclick="logout()" 
+          style="position:absolute; right:15px; top:15px; padding:5px 10px; border-radius:8px;">
+    🚪 Logout
+  </button>
 </header>
 
 <input type="text" id="search" placeholder="Search PDF..." onkeyup="searchPDF()">
