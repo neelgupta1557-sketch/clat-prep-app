@@ -7,6 +7,13 @@
 
 <body>
 
+<!-- 🔐 Already login hai toh direct redirect -->
+<script>
+if(localStorage.getItem("user")){
+  window.location.href = "pdfs.html";
+}
+</script>
+
 <div class="login-box">
   <h2>🔐 Login</h2>
 
@@ -15,7 +22,7 @@
   <!-- 🔥 PASSWORD WITH SVG ICON -->
   <div style="position:relative; width: 100%;">
     <input type="password" id="password" placeholder="Enter Password" style="width:100%; padding-right:40px;">
-    
+
     <span onclick="togglePassword()" 
           style="position:absolute; right:10px; top:10px; cursor:pointer;">
 
@@ -39,7 +46,7 @@
 
   <br>
 
-  <button onclick="login()">Login</button>
+  <button onclick="login()" id="loginBtn">Login</button>
   <button onclick="signup()">Sign Up</button>
 
   <p id="msg"></p>
@@ -64,6 +71,21 @@ function togglePassword(){
   }
 }
 
+// 🧠 Auto fill username
+window.onload = function(){
+  let savedUser = localStorage.getItem("user");
+  if(savedUser){
+    document.getElementById("username").value = savedUser;
+  }
+}
+
+// ⏎ Enter key login
+document.addEventListener("keypress", function(e){
+  if(e.key === "Enter"){
+    login();
+  }
+});
+
 // Signup
 function signup(){
   let user = document.getElementById("username").value;
@@ -80,7 +102,7 @@ function signup(){
   document.getElementById("msg").innerText = "✅ Account Created!";
 }
 
-// Login (Option 2 auto signup)
+// Login
 function login(){
   let user = document.getElementById("username").value;
   let pass = document.getElementById("password").value;
@@ -88,4 +110,48 @@ function login(){
   let savedUser = localStorage.getItem("user");
   let savedPass = localStorage.getItem("pass");
 
-  if(user === "" || pass ===
+  let msg = document.getElementById("msg");
+  let passField = document.getElementById("password");
+  let btn = document.getElementById("loginBtn");
+
+  if(user === "" || pass === ""){
+    msg.innerText = "⚠️ Fill all fields!";
+    return;
+  }
+
+  // 🔄 Loading effect
+  btn.innerText = "Logging in...";
+
+  // 🚀 First time → auto signup
+  if(!savedUser){
+    localStorage.setItem("user", user);
+    localStorage.setItem("pass", pass);
+
+    msg.innerText = "✅ Account auto-created!";
+    passField.style.border = "2px solid green";
+
+    setTimeout(() => {
+      window.location.href = "success.html";
+    }, 1000);
+
+    return;
+  }
+
+  if(user === savedUser && pass === savedPass){
+    msg.innerText = "✅ Login Successful!";
+    passField.style.border = "2px solid green";
+
+    setTimeout(() => {
+      window.location.href = "success.html";
+    }, 1000);
+  } else {
+    msg.innerText = "❌ Wrong Credentials";
+    passField.style.border = "2px solid red";
+    btn.innerText = "Login";
+  }
+}
+
+</script>
+
+</body>
+</html>
