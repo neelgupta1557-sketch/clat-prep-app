@@ -27,7 +27,7 @@ let pdfData = [
   {title:"Preamble union & its territories citizenship", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/preamble_union_&_its_territories_citizenship.pdf"},    
   {title:"Fundamental Rights & Duties", category:"Legal Reasoning", sub:"Constitution of India", type:"drive", fileId:"1ual18eHk4sZshQjJjwZc76R5ApQYbNgo"},    
   {title:"Union Executive", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/union_executive.pdf"},    
-  {title:"Parliament", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/parliament.pdf"},    
+  {title:"Parliament", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"parliament.pdf"},    
   {title:"Emergency Provisions in India", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/emergency_provisions_in_india.pdf"},    
   {title:"State Legislature", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/state_legislature.pdf"},    
   {title:"Governor", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/governor.pdf"},    
@@ -38,7 +38,7 @@ let pdfData = [
   {title:"Official Language", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/official_language.pdf"},    
   {title:"Some Important Points", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/some_important_points.pdf"},    
   {title:"GST & Union Budget", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/gst_&_union_budget.pdf"},    
-  {title:"Index", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/index.pdf"},    
+  {title:"Index", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"index.pdf"},    
 
   {title:"Contract Act", category:"Legal Reasoning", sub:"Contract", type:"github", link:"pdfs/contract1.pdf"},    
   {title:"Misc Law", category:"Legal Reasoning", sub:"Miscellaneous", type:"github", link:"pdfs/misc1.pdf"},    
