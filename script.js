@@ -87,9 +87,9 @@ function displayPDF(data){
       let downloadLink = "";
 
       if(pdf.type === "github"){
-        openLink = pdf.link;
-        downloadLink = pdf.link;
-      } 
+  openLink = pdf.link + "#toolbar=0";
+  downloadLink = pdf.link;
+}
       else if(pdf.type === "drive"){
         // 🔥 FINAL FIX (NO LOGIN ISSUE)
         openLink = `https://drive.google.com/uc?export=view&id=${pdf.fileId}`;
