@@ -101,7 +101,8 @@ function displayPDF(data){
   <h3>${pdf.title}</h3>    
   <p>${pdf.category} - ${pdf.sub}</p>    
 
-  <a href="${openLink}" target="_blank" rel="noopener noreferrer">
+  <a href="${openLink}" target="_blank" rel="noopener noreferrer"
+   onclick="this.innerText='⏳ Opening...'; alert('Please wait, PDF loading...')">
     <button>📖 Open</button>
   </a>    
 
