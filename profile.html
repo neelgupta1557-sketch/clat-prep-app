@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+input {
+  margin-top: 15px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #00c6ff;
+  color: white;
+  cursor: pointer;
+}
+
+.logout {
+  background: red;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+  <h2>👤 Profile</h2>
+
+  <img id="profilePic" src="https://via.placeholder.com/120"><br>
+
+  <h3 id="username"></h3>
+
+  <input type="file" onchange="uploadPic(event)"><br>
+
+  <button onclick="saveProfile()">Save</button>
+  <br>
+  <button class="logout" onclick="logout()">Logout</button>
+</div>
+
+<script>
+
+// Load data
+let user = localStorage.getItem("user");
+let pic = localStorage.getItem("profilePic");
+
+document.getElementById("username").innerText = user || "Guest";
+
+if(pic){
+  document.getElementById("profilePic").src = pic;
+}
+
+// Upload image
+function uploadPic(event){
+  let reader = new FileReader();
+  reader.onload = function(){
+    document.getElementById("profilePic").src = reader.result;
+    localStorage.setItem("profilePic", reader.result);
+  }
+  reader.readAsDataURL(event.target.files[0]);
+}
+
+// Save (optional)
+function saveProfile(){
+  alert("✅ Profile Saved!");
+}
+
+// Logout
+function logout(){
+  localStorage.removeItem("user");
+  localStorage.removeItem("pass");
+
+  window.location.href = "login.html";
+}
+
+</script>
+
+</body>
+</html>
