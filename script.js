@@ -40,7 +40,20 @@ let pdfData = [
   {title:"GST & Union Budget", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/gst_&_union_budget.pdf"},    
   {title:"Index", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"index.pdf"},    
 
-  {title:"Contract Act", category:"Legal Reasoning", sub:"Contract", type:"github", link:"pdfs/contract1.pdf"},    
+  {title:"Introduction", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/introduction.pdf"},    
+  {title:"Kinds of Contract", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/kinds_of_contract.pdf"},       
+  {title:"Proposal", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/proposal.pdf"},    
+  {title:"Acceptance", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/acceptance.pdf"},    
+  {title:"Free Consent", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/free_consent.pdf"},    
+  {title:"Capacity of parties", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/capacity_of_parties.pdf"},    
+  {title:"Consideration", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/consideration.pdf"},    
+  {title:"Void agreements", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/void_agreements.pdf"},    
+  {title:"Performance of contract", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/performance_of_contract.pdf"},    
+  {title:"Quasi contract", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/quasi_contract.pdf"},    
+  {title:"Discharge of contract", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/discharge_of_contract.pdf"},    
+  {title:"Remedies for breach of contract", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdf/remedies_for_breach_of_contract.pdf"},    
+  {title:"Differences", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/differences.pdf"},    
+  {title:"Special Contracts", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/special_contract.pdf"},    
   {title:"Misc Law", category:"Legal Reasoning", sub:"Miscellaneous", type:"github", link:"pdfs/misc1.pdf"},    
 
   // 👉 DRIVE (yahan apne ID daal)
