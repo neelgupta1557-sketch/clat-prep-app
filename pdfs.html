@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,20 +19,20 @@ if(localStorage.getItem("user") === null){
 
 <div id="splash">🚀 Loading App...</div>
 
-<header>
+<header style="position:relative;">
   <h2>📚 CLAT Study Material</h2>
-  
-  <!-- 👤 Username show -->
+
+  <!-- 👤 Username -->
   <p id="welcomeUser" style="font-size:14px;"></p>
 
-  <!-- 🚪 Logout Button -->
+  <!-- 🚪 Logout -->
   <button onclick="logout()" 
-          style="position:absolute; right:15px; top:15px; padding:5px 10px; border-radius:8px;">
+    style="position:absolute; right:15px; top:15px; padding:6px 12px; border-radius:10px; cursor:pointer;">
     🚪 Logout
   </button>
 </header>
 
-<input type="text" id="search" placeholder="Search PDF..." onkeyup="searchPDF()">
+<input type="text" id="search" placeholder="🔍 Search PDF..." onkeyup="searchPDF()">
 
 <br><br>
 
@@ -64,7 +64,7 @@ if(localStorage.getItem("user") === null){
 
 <script src="script.js"></script>
 
-<!-- 🔻 Bottom Navigation -->
+<!-- 🔻 Bottom Nav -->
 <div class="bottom-nav">
   <a href="#">🏠 Home</a>
   <a href="#">📚 Study</a>
@@ -73,11 +73,14 @@ if(localStorage.getItem("user") === null){
 </div>
 
 <script>
-// 👤 Show username
-let user = localStorage.getItem("user");
-document.getElementById("welcomeUser").innerText = "Welcome, " + user + " 👋";
+// 👤 Username show (safe version)
+let user = localStorage.getItem("user") || "User";
+let welcome = document.getElementById("welcomeUser");
+if(welcome){
+  welcome.innerText = "Welcome, " + user + " 👋";
+}
 
-// 🔀 Go to profile page
+// 🔀 Profile page
 function goProfile(){
   window.location.href = "profile.html";
 }
