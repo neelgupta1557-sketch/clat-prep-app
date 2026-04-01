@@ -51,9 +51,9 @@ let pdfData = [
   {title:"Performance of contract", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/performance_of_contract.pdf"},    
   {title:"Quasi contract", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/quasi_contract.pdf"},    
   {title:"Discharge of contract", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/discharge_of_contract.pdf"},    
-  {title:"Remedies for breach of contract", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdf/remedies_for_breach_of_contract.pdf"},    
+  {title:"Remedies for breach of contract", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/remedies_for_breach_of_contract.pdf"},    
   {title:"Differences", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/differences.pdf"},    
-  {title:"Special Contracts", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/special_contract.pdf"},    
+  {title:"Special Contracts", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/special_contracts.pdf"},    
   {title:"Misc Law", category:"Legal Reasoning", sub:"Miscellaneous", type:"github", link:"pdfs/misc1.pdf"},    
 
   // 👉 DRIVE (yahan apne ID daal)
