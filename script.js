@@ -139,11 +139,35 @@ function filterCategory(cat){
 displayPDF(pdfData);
 
 
-// SPLASH
-setTimeout(() => {    
-  let splash = document.getElementById("splash");    
-  if(splash) splash.style.display = "none";  
-}, 2000);
+// SPLASH (PRO VERSION)
+window.addEventListener("load", () => {
+
+  let splash = document.getElementById("splash");
+  let sound = document.getElementById("introSound");
+
+  // 🔊 Sound play on first touch (mobile fix)
+  function playSoundOnce(){
+    if(sound){
+      sound.play().catch(()=>{});
+    }
+    document.removeEventListener("click", playSoundOnce);
+  }
+
+  document.addEventListener("click", playSoundOnce);
+
+  // ⏳ Smooth hide after animation complete
+  setTimeout(() => {
+    if(splash){
+      splash.style.opacity = "0";
+      splash.style.transition = "0.5s";
+
+      setTimeout(() => {
+        splash.style.display = "none";
+      }, 500);
+    }
+  }, 5000); // 5 sec perfect timing (logo + typing + subtitle)
+
+});
 
 // 👤 Get current user
 function getCurrentUser(){
