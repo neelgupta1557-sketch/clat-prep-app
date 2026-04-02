@@ -228,3 +228,13 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+body {
+  overflow-x: hidden;
+}
+
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
