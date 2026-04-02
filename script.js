@@ -1,3 +1,6 @@
+// 🔥 CHECK SCRIPT LOAD
+console.log("SCRIPT LOADED");
+
 let pdfData = [    
 
   // LEGAL REASONING
@@ -174,39 +177,13 @@ showUser();
 
 
 // ================= 🔥 SPLASH (FINAL) =================
-window.addEventListener("load", () => {
 
+  window.onload = function () {
   let splash = document.getElementById("splash");
-  let text = "CLAT Prep App";
-  let i = 0;
-  let title = document.getElementById("appName");
-  let bar = document.getElementById("barFill");
 
-  if(!splash) return; // safety
-
-  // Typing effect
-  let typing = setInterval(() => {
-    if(i < text.length && title){
-      title.innerHTML += text.charAt(i);
-      i++;
-    } else {
-      clearInterval(typing);
+  setTimeout(() => {
+    if (splash) {
+      splash.style.display = "none";
     }
-  }, 80);
-
-  // Loading bar
-  let progress = 0;
-  let interval = setInterval(() => {
-    progress += 2;
-    if(bar) bar.style.width = progress + "%";
-
-    if(progress >= 100){
-      clearInterval(interval);
-
-      setTimeout(() => {
-        splash.style.display = "none";
-      }, 300);
-    }
-  }, 60);
-
-});
+  }, 2500); // 2.5 sec
+};
