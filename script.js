@@ -141,32 +141,13 @@ displayPDF(pdfData);
 
 // SPLASH (PRO VERSION)
 window.addEventListener("load", () => {
-
   let splash = document.getElementById("splash");
-  let sound = document.getElementById("introSound");
 
-  // 🔊 Sound play on first touch (mobile fix)
-  function playSoundOnce(){
-    if(sound){
-      sound.play().catch(()=>{});
-    }
-    document.removeEventListener("click", playSoundOnce);
-  }
-
-  document.addEventListener("click", playSoundOnce);
-
-  // ⏳ Smooth hide after animation complete
   setTimeout(() => {
     if(splash){
-      splash.style.opacity = "0";
-      splash.style.transition = "0.5s";
-
-      setTimeout(() => {
-        splash.style.display = "none";
-      }, 500);
+      splash.style.display = "none";
     }
-  }, 5000); // 5 sec perfect timing (logo + typing + subtitle)
-
+  }, 3000); // 3 sec simple
 });
 
 // 👤 Get current user
