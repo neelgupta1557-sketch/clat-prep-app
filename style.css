@@ -1,3 +1,4 @@
+/* GLOBAL */
 body {
   font-family: 'Poppins', sans-serif;
   background: #eef2f7;
@@ -33,26 +34,27 @@ header {
 /* MENU */
 .menu {
   display: flex;
-  overflow-x: auto;
-  padding: 10px;
-  gap: 8px;
+  flex-wrap: wrap; /* 🔥 better layout */
+  justify-content: center;
+  padding: 15px;
+  gap: 10px;
 }
 
-.menu button {
-  flex: 0 0 auto;
-  padding: 8px 14px;
-  border-radius: 20px;
-  border: none;
+.menu .card {
   background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  cursor: pointer;
-  font-size: 13px;
+  padding: 15px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   transition: 0.3s;
 }
 
-.menu button:hover {
+.menu .card:hover {
   background: #667eea;
   color: white;
+  transform: translateY(-3px);
 }
 
 /* PDF GRID */
@@ -125,36 +127,99 @@ header {
   background: #00a383;
 }
 
-/* SPLASH */
+/* ========================= */
+/* 🔥 SPLASH SCREEN PRO */
+/* ========================= */
+
 #splash {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #667eea;
-  color: white;
+  background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 22px;
-  z-index: 999;
+  z-index: 9999;
+  color: white;
+  text-align: center;
+  transition: opacity 0.5s ease;
 }
 
-/* BOTTOM NAV */
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: white;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+.logo {
+  font-size: 60px;
+  color: #00ffcc;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: zoomGlow 2s forwards;
 }
 
-.bottom-nav a {
-  text-decoration: none;
-  color: #555;
+@keyframes zoomGlow {
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+    text-shadow: 0 0 20px #00ffcc;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.typing {
+  margin-top: 20px;
+  font-size: 28px;
+  border-right: 3px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 2.5s steps(20) forwards, blink 0.7s infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes typing {
+  to { width: 260px }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.subtitle {
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 3.5s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1 }
+}
+
+/* 🔥 LOADING BAR */
+.progress-container {
+  width: 250px;
+  height: 6px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #00ffcc;
+  border-radius: 10px;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+  text-align: center;
+  padding: 15px;
   font-size: 13px;
+  color: #666;
 }
 
 /* RESPONSIVE */
@@ -162,71 +227,4 @@ header {
   #pdfList {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-#splash {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-/* Same animation as before */
-.logo {
-    font-size: 60px;
-    color: #00ffcc;
-    opacity: 0;
-    transform: scale(0.5);
-    animation: zoomGlow 2s forwards;
-}
-
-@keyframes zoomGlow {
-    50% {
-        opacity: 1;
-        transform: scale(1.2);
-        text-shadow: 0 0 20px #00ffcc;
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.typing {
-    margin-top: 20px;
-    font-size: 28px;
-    border-right: 3px solid white;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    animation: typing 2.5s steps(20) forwards, blink 0.7s infinite;
-    animation-delay: 1.5s;
-}
-
-@keyframes typing {
-    to { width: 260px }
-}
-
-@keyframes blink {
-    50% { border-color: transparent }
-}
-
-.subtitle {
-    margin-top: 10px;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
-    animation-delay: 3.5s;
-}
-
-@keyframes fadeIn {
-    to { opacity: 1 }
-}
-
-#splash {
-  transition: opacity 0.5s ease;
 }
