@@ -174,16 +174,3 @@ if(window.location.pathname.includes("pdfs.html")){
 
 // 👤 Auto run
 showUser();
-
-
-// ================= 🔥 SPLASH (FINAL) =================
-
-  window.onload = function () {
-  let splash = document.getElementById("splash");
-
-  setTimeout(() => {
-    if (splash) {
-      splash.style.display = "none";
-    }
-  }, 2500); // 2.5 sec
-};
