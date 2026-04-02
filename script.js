@@ -139,17 +139,6 @@ function filterCategory(cat){
 displayPDF(pdfData);
 
 
-// SPLASH (PRO VERSION)
-window.addEventListener("load", () => {
-  let splash = document.getElementById("splash");
-
-  setTimeout(() => {
-    if(splash){
-      splash.style.display = "none";
-    }
-  }, 3000); // 3 sec simple
-});
-
 // 👤 Get current user
 function getCurrentUser(){
   return localStorage.getItem("user");
@@ -182,3 +171,42 @@ if(window.location.pathname.includes("pdfs.html")){
 
 // 👤 Auto run
 showUser();
+
+
+// ================= 🔥 SPLASH (FINAL) =================
+window.addEventListener("load", () => {
+
+  let splash = document.getElementById("splash");
+  let text = "CLAT Prep App";
+  let i = 0;
+  let title = document.getElementById("appName");
+  let bar = document.getElementById("barFill");
+
+  if(!splash) return; // safety
+
+  // Typing effect
+  let typing = setInterval(() => {
+    if(i < text.length && title){
+      title.innerHTML += text.charAt(i);
+      i++;
+    } else {
+      clearInterval(typing);
+    }
+  }, 80);
+
+  // Loading bar
+  let progress = 0;
+  let interval = setInterval(() => {
+    progress += 2;
+    if(bar) bar.style.width = progress + "%";
+
+    if(progress >= 100){
+      clearInterval(interval);
+
+      setTimeout(() => {
+        splash.style.display = "none";
+      }, 300);
+    }
+  }, 60);
+
+});
