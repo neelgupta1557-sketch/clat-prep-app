@@ -226,3 +226,7 @@ header {
 @keyframes fadeIn {
     to { opacity: 1 }
 }
+
+#splash {
+  transition: opacity 0.5s ease;
+}
