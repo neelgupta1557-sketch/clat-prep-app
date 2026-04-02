@@ -1,7 +1,21 @@
 // 🔥 CHECK SCRIPT LOAD
 console.log("SCRIPT LOADED");
 
-let pdfData = [    
+/* =========================
+   🔥 LOADING FIX (IMPORTANT)
+========================= */
+window.addEventListener("load", function () {
+  let loader = document.getElementById("loading");
+  if (loader) {
+    loader.style.display = "none";
+  }
+});
+
+/* =========================
+   📚 FULL PDF DATA (UNCHANGED)
+========================= */
+
+let pdfData = [
 
   // LEGAL REASONING
   {title:"Nature and Stages of Crime", category:"Legal Reasoning", sub:"Law of Crimes", type:"drive", fileId:"1UTKR6cDaW73yaCqeHfIglgrIpwVFXgxX"},    
@@ -26,7 +40,7 @@ let pdfData = [
   {title:"Remidies", category:"Legal Reasoning", sub:"Law of Tort", type:"github", link:"remidies.pdf"},    
 
   {title:"Framing of Indian Constitution", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/framing_of_indian_constitution.pdf"},     
-  {title:"Parts & Schedules of Indian Constitution", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/parts_and_schedules_of_indian_constituion.pdf"},    
+  {title:"Parts & Schedules of Indian Constitution", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/parts_and_schedules_of_indian_constitution.pdf"},    
   {title:"Preamble union & its territories citizenship", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"pdfs/preamble_union_&_its_territories_citizenship.pdf"},    
   {title:"Fundamental Rights & Duties", category:"Legal Reasoning", sub:"Constitution of India", type:"drive", fileId:"1ual18eHk4sZshQjJjwZc76R5ApQYbNgo"},    
   {title:"Union Executive", category:"Legal Reasoning", sub:"Constitution of India", type:"github", link:"union_executive.pdf"},    
@@ -59,7 +73,7 @@ let pdfData = [
   {title:"Special Contracts", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/special_contracts.pdf"},    
   {title:"Misc Law", category:"Legal Reasoning", sub:"Miscellaneous", type:"github", link:"pdfs/misc1.pdf"},    
 
-  // 👉 DRIVE (yahan apne ID daal)
+  // DRIVE
   {title:"Legal English", category:"Legal Reasoning", sub:"English", type:"drive", fileId:"PASTE_ID"},    
   {title:"Legal GK", category:"Legal Reasoning", sub:"GK", type:"drive", fileId:"PASTE_ID"},    
 
@@ -76,10 +90,12 @@ let pdfData = [
 
 ];
 
+/* =========================
+   📄 DISPLAY FUNCTION
+========================= */
 
-// 🔥 DISPLAY
-function displayPDF(data){    
-  let html = "";    
+function displayPDF(data){
+  let html = "";
 
   if(data.length === 0){
     html = "<p>❌ No PDFs Found</p>";
@@ -90,64 +106,71 @@ function displayPDF(data){
       let downloadLink = "";
 
       if(pdf.type === "github"){
-  openLink = pdf.link + "#toolbar=0";
-  downloadLink = pdf.link;
-}
-      else if(pdf.type === "drive"){
-        // 🔥 FINAL FIX (NO LOGIN ISSUE)
+        openLink = pdf.link + "#toolbar=0";
+        downloadLink = pdf.link;
+      } else if(pdf.type === "drive"){
         openLink = `https://drive.google.com/uc?export=view&id=${pdf.fileId}`;
         downloadLink = `https://drive.google.com/uc?export=download&id=${pdf.fileId}`;
       }
 
       html += `
-<div class="card">    
-  <h3>${pdf.title}</h3>    
-  <p>${pdf.category} - ${pdf.sub}</p>    
+<div class="card">
+  <h3>${pdf.title}</h3>
+  <p>${pdf.category} - ${pdf.sub}</p>
 
-  <a href="${openLink}" target="_blank" rel="noopener noreferrer">
+  <a href="${openLink}" target="_blank">
     <button>📖 Open</button>
-  </a>    
+  </a>
 
   <a href="${downloadLink}" download>
     <button class="download-btn">⬇️ Download</button>
-  </a>    
+  </a>
 </div>`;
     });
   }
 
-  document.getElementById("pdfList").innerHTML = html;    
+  document.getElementById("pdfList").innerHTML = html;
 }
 
+/* =========================
+   🔍 SEARCH
+========================= */
 
-// SEARCH
-function searchPDF(){    
-  let input = document.getElementById("search").value.toLowerCase();    
-  let filtered = pdfData.filter(pdf =>    
-    pdf.title.toLowerCase().includes(input) ||    
-    pdf.category.toLowerCase().includes(input) ||    
-    pdf.sub.toLowerCase().includes(input)    
-  );    
-  displayPDF(filtered);    
+function searchPDF(){
+  let input = document.getElementById("search").value.toLowerCase();
+
+  let filtered = pdfData.filter(pdf =>
+    pdf.title.toLowerCase().includes(input) ||
+    pdf.category.toLowerCase().includes(input) ||
+    pdf.sub.toLowerCase().includes(input)
+  );
+
+  displayPDF(filtered);
 }
 
+/* =========================
+   🎯 FILTER
+========================= */
 
-// FILTER
-function filterCategory(cat){    
-  let filtered = pdfData.filter(pdf => pdf.category === cat);    
-  displayPDF(filtered);    
+function filterCategory(cat){
+  let filtered = pdfData.filter(pdf => pdf.category === cat);
+  displayPDF(filtered);
 }
 
+/* =========================
+   📌 INIT LOAD
+========================= */
 
-// LOAD
 displayPDF(pdfData);
 
+/* =========================
+   👤 USER SYSTEM
+========================= */
 
-// 👤 Get current user
 function getCurrentUser(){
   return localStorage.getItem("user");
 }
 
-// 👋 Welcome message (agar element exist kare)
 function showUser(){
   let user = getCurrentUser();
   let el = document.getElementById("welcomeUser");
@@ -157,20 +180,24 @@ function showUser(){
   }
 }
 
-// 🔓 Logout function
 function logout(){
   localStorage.removeItem("user");
   localStorage.removeItem("pass");
-
   window.location.href = "login.html";
 }
 
-// 🔐 Extra protection (agar direct script load ho)
+/* =========================
+   🔐 SECURITY
+========================= */
+
 if(window.location.pathname.includes("pdfs.html")){
   if(!getCurrentUser()){
     window.location.href = "login.html";
   }
 }
 
-// 👤 Auto run
+/* =========================
+   🚀 INIT
+========================= */
+
 showUser();
