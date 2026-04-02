@@ -1,123 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Access Granted</title>
-
+<meta charset="UTF-8">
+<title>Success</title>
 <style>
-body {
-  margin: 0;
-  background: black;
-  overflow: hidden;
-  color: #00ffcc;
-  font-family: monospace;
-}
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        color: white;
+        text-align: center;
+    }
 
-/* Matrix rain */
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+    .box {
+        background: rgba(255,255,255,0.1);
+        padding: 40px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        animation: fadeIn 1.5s ease;
+    }
 
-/* Center text */
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+    .checkmark {
+        font-size: 80px;
+        color: #00ffcc;
+        animation: pop 0.5s ease;
+    }
 
-/* Glow text */
-.glow {
-  font-size: 30px;
-  animation: glow 1s infinite alternate;
-}
+    h1 {
+        margin-top: 10px;
+    }
 
-@keyframes glow {
-  from { text-shadow: 0 0 10px #00ffcc; }
-  to { text-shadow: 0 0 30px #00ffcc; }
-}
+    p {
+        opacity: 0.8;
+    }
 
-/* Username background */
-.username {
-  position: absolute;
-  font-size: 80px;
-  color: rgba(0,255,200,0.05);
-  white-space: nowrap;
-  animation: scroll 10s linear infinite;
-}
+    .btn {
+        margin-top: 20px;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 30px;
+        background: #00ffcc;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
 
-@keyframes scroll {
-  0% { transform: translateY(100%); }
-  100% { transform: translateY(-100%); }
-}
+    .btn:hover {
+        background: #00ccaa;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(30px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes pop {
+        0% {transform: scale(0);}
+        100% {transform: scale(1);}
+    }
 </style>
-
 </head>
-
 <body>
 
-<canvas id="matrix"></canvas>
+<div class="box">
+    <div class="checkmark">✔</div>
+    <h1>Login Successful</h1>
+    <p>Welcome back, you are successfully logged in.</p>
 
-<div class="username" id="bgName"></div>
-
-<div class="center">
-  <div class="glow">💀 ACCESS GRANTED 💀</div>
+    <button class="btn" onclick="goHome()">Go to Home</button>
 </div>
 
 <script>
-
-// 🔊 Sound effect
-let audio = new Audio("https://www.soundjay.com/buttons/sounds/button-3.mp3");
-audio.play();
-
-// Username show
-let user = localStorage.getItem("user") || "USER";
-document.getElementById("bgName").innerText = user;
-
-// Matrix rain effect
-let canvas = document.getElementById("matrix");
-let ctx = canvas.getContext("2d");
-
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
-
-let letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-letters = letters.split("");
-
-let fontSize = 14;
-let columns = canvas.width / fontSize;
-let drops = [];
-
-for(let x = 0; x < columns; x++)
-  drops[x] = 1;
-
-function draw(){
-  ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  ctx.fillStyle = "#0f0";
-  ctx.font = fontSize + "px monospace";
-
-  for(let i = 0; i < drops.length; i++){
-    let text = letters[Math.floor(Math.random()*letters.length)];
-    ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-
-    if(drops[i]*fontSize > canvas.height && Math.random() > 0.975)
-      drops[i] = 0;
-
-    drops[i]++;
-  }
+function goHome() {
+    window.location.href = "index.html";
 }
-
-setInterval(draw, 33);
-
-// ⏳ Redirect after 3 sec
-setTimeout(() => {
-  window.location.href = "pdfs.html";
-}, 3000);
-
 </script>
 
 </body>
