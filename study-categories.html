@@ -1,25 +1,58 @@
-<h2>Study Materials</h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Categories - CLAT Prep</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-<div id="level1">
-  <button onclick="openLegal()">Legal Reasoning</button>
-  <button onclick="openCategory('logical')">Logical Reasoning</button>
-  <button onclick="openCategory('quant')">Quantitative Techniques</button>
-  <button onclick="openCategory('pyq')">Previous Year Paper</button>
-  <button onclick="openCategory('clatMock')">CLAT Mock Test</button>
-  <button onclick="openCategory('clatSample')">CLAT Sample Paper</button>
-  <button onclick="openCategory('ailetMock')">AILET Mock Test</button>
-  <button onclick="openCategory('ailetPyq')">AILET PYQs</button>
-  <button onclick="openCategory('slatMock')">SLAT Mock Test</button>
-  <button onclick="openCategory('slatNotes')">SLAT Notes</button>
+<body>
+
+<header>
+  <h2>📚 Study Categories</h2>
+</header>
+
+<div class="menu">
+
+  <!-- ⚖️ LEGAL -->
+  <a href="pdfs.html?cat=Legal Reasoning" class="card">
+    ⚖️ Legal Reasoning
+  </a>
+
+  <!-- 🧠 LOGICAL -->
+  <a href="pdfs.html?cat=Logical Reasoning" class="card">
+    🧠 Logical Reasoning
+  </a>
+
+  <!-- 📊 QUANT -->
+  <a href="pdfs.html?cat=Quantitative Techniques" class="card">
+    📊 Quantitative Techniques
+  </a>
+
+  <!-- 📝 MOCK TEST -->
+  <a href="pdfs.html?cat=CLAT Mock Test" class="card">
+    📝 CLAT Mock Tests
+  </a>
+
+  <!-- 📘 SAMPLE PAPER -->
+  <a href="pdfs.html?cat=CLAT Sample Paper" class="card">
+    📘 Sample Papers
+  </a>
+
+  <!-- 📄 PYQs -->
+  <a href="pdfs.html?cat=Previous Year Papers" class="card">
+    📄 Previous Year Papers
+  </a>
+
+  <!-- 🪖 NDA -->
+  <a href="pdfs.html?cat=Legal Reasoning" class="card">
+    🪖 NDA Study Material
+  </a>
+
 </div>
 
-<!-- LEVEL 2 -->
-<div id="level2" style="display:none;">
-  <h3>Legal Reasoning Topics</h3>
+<footer>
+  <p>Made by Neel</p>
+</footer>
 
-  <button onclick="openPDF('crimes')">Law of Crimes</button>
-  <button onclick="openPDF('tort')">Law of Tort</button>
-  <button onclick="openPDF('constitution')">Constitution of India</button>
-  <button onclick="openPDF('contract')">Indian Contract Act</button>
-  <button onclick="openPDF('misc')">Miscellaneous Laws</button>
-</div>
+</body>
+</html>
