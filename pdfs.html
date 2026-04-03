@@ -25,6 +25,13 @@ if(localStorage.getItem("user") === null){
   <!-- 👤 Username -->
   <p id="welcomeUser" style="font-size:14px;"></p>
 
+  <!-- 🖼️ Profile Image -->
+  <div class="top-profile" style="position:absolute; right:120px; top:10px;">
+    <img id="profilePic" src="default.png" 
+      style="width:40px; height:40px; border-radius:50%; cursor:pointer; object-fit:cover;">
+    <input type="file" id="uploadPic" accept="image/*" style="display:none;">
+  </div>
+
   <!-- 🚪 Logout -->
   <button onclick="logout()" 
     style="position:absolute; right:15px; top:15px; padding:6px 12px; border-radius:10px; cursor:pointer;">
