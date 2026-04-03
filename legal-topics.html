@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Legal Topics - CLAT Prep</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- 🔐 Login Check -->
+<script>
+if(localStorage.getItem("user") === null){
+  window.location.href = "login.html";
+}
+</script>
+
+<header>
+  <h2>⚖️ Legal Reasoning Topics</h2>
+  <p id="welcomeUser"></p>
+</header>
+
+<!-- 🔍 Search -->
+<input type="text" id="search" placeholder="🔍 Search Legal Topic..." onkeyup="searchLegal()">
+
+<!-- 📂 Filters -->
+<div class="menu">
+
+  <button onclick="filterLegal('Law of Crimes')">⚖️ Crimes</button>
+  <button onclick="filterLegal('Law of Tort')">🧑‍⚖️ Torts</button>
+  <button onclick="filterLegal('Constitution of India')">🏛️ Constitution</button>
+  <button onclick="filterLegal('Contract Act')">📜 Contract Act</button>
+  <button onclick="filterLegal('Miscellaneous Laws')">📚 Misc Laws</button>
+
+  <button onclick="displayLegal(legalData)">🔄 Show All</button>
+
+</div>
+
+<br>
+
+<div id="pdfList"></div>
+
+<script src="script.js"></script>
+
+<script>
+// 🔥 Only Legal Data
+let legalData = pdfData.filter(pdf => pdf.category === "Legal Reasoning");
+
+// 📖 Display Function
+function displayLegal(data){
+
+  let html = "";
+
+  if(data.length === 0){
+    html = "<p>❌ No Legal PDFs Found</p>";
+  } else {
+
+    data.forEach(pdf => {
+
+      let openLink = "";
+      let downloadLink = "";
+
+      if(pdf.type === "github"){
+        openLink = pdf.link + "#toolbar=0";
+        downloadLink = pdf.link;
+      } 
+      else if(pdf.type === "drive"){
+        openLink = `https://drive.google.com/uc?export=view&id=${pdf.fileId}`;
+        downloadLink = `https://drive.google.com/uc?export=download&id=${pdf.fileId}`;
+      }
+
+      html += `
+      <div class="card">
+        <h3>${pdf.title}</h3>
+        <p>${pdf.sub}</p>
+
+        <a href="${openLink}" target="_blank">
+          <button>📖 Open</button>
+        </a>
+
+        <a href="${downloadLink}" download>
+          <button class="download-btn">⬇️ Download</button>
+        </a>
+      </div>
+      `;
+    });
+  }
+
+  document.getElementById("pdfList").innerHTML = html;
+}
+
+// 🔍 Search
+function searchLegal(){
+  let input = document.getElementById("search").value.toLowerCase();
+
+  let filtered = legalData.filter(pdf =>
+    pdf.title.toLowerCase().includes(input) ||
+    pdf.sub.toLowerCase().includes(input)
+  );
+
+  displayLegal(filtered);
+}
+
+// 🧠 Filter by topic
+function filterLegal(topic){
+  let filtered = legalData.filter(pdf => pdf.sub === topic);
+  displayLegal(filtered);
+}
+
+// 👤 Welcome user
+let user = localStorage.getItem("user") || "User";
+document.getElementById("welcomeUser").innerText = "Welcome, " + user + " 👋";
+
+// 🚀 Load default
+displayLegal(legalData);
+
+</script>
+
+</body>
+</html>
