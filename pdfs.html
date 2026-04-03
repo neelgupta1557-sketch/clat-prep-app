@@ -76,6 +76,16 @@ if(localStorage.getItem("user") === null){
 
 <script src="script.js"></script>
 
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const cat = urlParams.get("cat");
+
+if(cat){
+  let filtered = pdfData.filter(pdf => pdf.category === cat);
+  displayPDF(filtered);
+}
+</script>
+
 <!-- 🔥 NEW LEVEL SYSTEM AUTO LOADER -->
 <script>
 window.onload = function(){
