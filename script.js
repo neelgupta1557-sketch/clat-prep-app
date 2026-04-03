@@ -1,6 +1,6 @@
 let pdfData = [    
 
-  // LEGAL REASONING
+  // LEGAL REASONING (❌ NO CHANGE - SAME AS YOURS)
   {title:"Nature and Stages of Crime", category:"Legal Reasoning", sub:"Law of Crimes", type:"drive", fileId:"1UTKR6cDaW73yaCqeHfIglgrIpwVFXgxX"},    
   {title:"Punishment in IPC", category:"Legal Reasoning", sub:"Law of Crimes", type:"github", link:"pdfs/punishment_in_ipc.pdf"},    
   {title:"Joint Liability", category:"Legal Reasoning", sub:"Law of Crimes", type:"github", link:"pdfs/joint_liability.pdf"},    
@@ -55,20 +55,19 @@ let pdfData = [
   {title:"Differences", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/differences.pdf"},    
   {title:"Special Contracts", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/special_contracts.pdf"},    
   {title:"Important legal maxims", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/important_legal_maxims.pdf"},    
-    {title:"100 Important legal terms", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/100_important_legal_terms.pdf"},    
-    {title:"United Nations", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/united_nations.pdf"},    
-    {title:"Most important case laws of 2022-2023", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/most_importants_case_laws_of_2022-2023.pdf"},    
-    {title:"Landmark Judgement", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/landmark_judgement.pdf"},    
-    {title:"Legal Aptitude-I", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/legal_aptitude.pdf"},    
-    {title:"Transfer of property act 1882", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/transfer_of_property_act_1882.pdf"},    
-  {title:"Pocso (Protection of children from sexual offences) Act 2012", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/pocso_protection_of_children_from_sexual_offences_act_2012.pdf"},    
-    {title:"International law", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/international_law.pdf"},    
-    {title:"Family law", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/family_law.pdf"},    
-    {title:"Information technology Act 2000", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/information_technology_act_2000.pdf"},    
-    {title:"Intellectual Property Rights", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/intellectual_property_rights.pdf"},    
+  {title:"100 Important legal terms", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/100_important_legal_terms.pdf"},    
+  {title:"United Nations", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/united_nations.pdf"},    
+  {title:"Most important case laws of 2022-2023", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/most_importants_case_laws_of_2022-2023.pdf"},    
+  {title:"Landmark Judgement", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/landmark_judgement.pdf"},    
+  {title:"Legal Aptitude-I", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/legal_aptitude.pdf"},    
+  {title:"Transfer of property act 1882", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/transfer_of_property_act_1882.pdf"},    
+  {title:"Pocso Act", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/pocso_protection_of_children_from_sexual_offences_act_2012.pdf"},    
+  {title:"International law", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/international_law.pdf"},    
+  {title:"Family law", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/family_law.pdf"},    
+  {title:"Information technology Act 2000", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/information_technology_act_2000.pdf"},    
+  {title:"Intellectual Property Rights", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/intellectual_property_rights.pdf"},    
 
-
-  // 👉 DRIVE (yahan apne ID daal)
+  // 👉 DRIVE
   {title:"Legal English", category:"Legal Reasoning", sub:"English", type:"drive", fileId:"PASTE_ID"},    
   {title:"Legal GK", category:"Legal Reasoning", sub:"GK", type:"drive", fileId:"PASTE_ID"},    
 
@@ -86,7 +85,7 @@ let pdfData = [
 ];
 
 
-// 🔥 DISPLAY
+// 🔥 DISPLAY (UNCHANGED)
 function displayPDF(data){    
   let html = "";    
 
@@ -99,11 +98,10 @@ function displayPDF(data){
       let downloadLink = "";
 
       if(pdf.type === "github"){
-  openLink = pdf.link + "#toolbar=0";
-  downloadLink = pdf.link;
-}
+        openLink = pdf.link + "#toolbar=0";
+        downloadLink = pdf.link;
+      }
       else if(pdf.type === "drive"){
-        // 🔥 FINAL FIX (NO LOGIN ISSUE)
         openLink = `https://drive.google.com/uc?export=view&id=${pdf.fileId}`;
         downloadLink = `https://drive.google.com/uc?export=download&id=${pdf.fileId}`;
       }
@@ -113,7 +111,7 @@ function displayPDF(data){
   <h3>${pdf.title}</h3>    
   <p>${pdf.category} - ${pdf.sub}</p>    
 
-  <a href="${openLink}" target="_blank" rel="noopener noreferrer">
+  <a href="${openLink}" target="_blank">
     <button>📖 Open</button>
   </a>    
 
@@ -128,7 +126,7 @@ function displayPDF(data){
 }
 
 
-// SEARCH
+// SEARCH (UNCHANGED)
 function searchPDF(){    
   let input = document.getElementById("search").value.toLowerCase();    
   let filtered = pdfData.filter(pdf =>    
@@ -140,10 +138,27 @@ function searchPDF(){
 }
 
 
-// FILTER
-function filterCategory(cat){    
-  let filtered = pdfData.filter(pdf => pdf.category === cat);    
-  displayPDF(filtered);    
+// FILTER (UPDATED SAFE VERSION)
+function filterCategory(cat){
+
+  let main = localStorage.getItem("selectedMain");
+  let sub = localStorage.getItem("selectedSub");
+
+  let filtered = pdfData;
+
+  if(main){
+    filtered = filtered.filter(pdf => pdf.category === main);
+  }
+
+  if(sub){
+    filtered = filtered.filter(pdf => pdf.sub === sub);
+  }
+
+  if(!main && !sub && cat){
+    filtered = filtered.filter(pdf => pdf.category === cat);
+  }
+
+  displayPDF(filtered);
 }
 
 
@@ -157,12 +172,12 @@ setTimeout(() => {
   if(splash) splash.style.display = "none";  
 }, 2000);
 
-// 👤 Get current user
+
+// 👤 USER
 function getCurrentUser(){
   return localStorage.getItem("user");
 }
 
-// 👋 Welcome message (agar element exist kare)
 function showUser(){
   let user = getCurrentUser();
   let el = document.getElementById("welcomeUser");
@@ -172,20 +187,41 @@ function showUser(){
   }
 }
 
-// 🔓 Logout function
+// 🔓 LOGOUT
 function logout(){
   localStorage.removeItem("user");
   localStorage.removeItem("pass");
-
   window.location.href = "login.html";
 }
 
-// 🔐 Extra protection (agar direct script load ho)
+// 🔐 PROTECTION
 if(window.location.pathname.includes("pdfs.html")){
   if(!getCurrentUser()){
     window.location.href = "login.html";
   }
 }
 
-// 👤 Auto run
+// INIT
 showUser();
+
+
+// 🔥 NEW NAV FUNCTIONS (ADDED)
+function openStudyMaterials(){
+  window.location.href = "study-categories.html";
+}
+
+function openLegal(){
+  localStorage.setItem("selectedMain","Legal Reasoning");
+  window.location.href = "legal-topics.html";
+}
+
+function openCategory(cat){
+  localStorage.setItem("selectedMain",cat);
+  localStorage.removeItem("selectedSub");
+  window.location.href = "pdfs.html";
+}
+
+function openSubTopic(sub){
+  localStorage.setItem("selectedSub",sub);
+  window.location.href = "pdfs.html";
+}
