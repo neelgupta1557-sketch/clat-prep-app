@@ -1,55 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CLAT App</title>
-  <link rel="stylesheet" href="style.css">
+<title>CLAT Prep by Neel</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div id="welcomeUser"></div>
-<button onclick="logout()">Logout</button>
+<header>
+<h1>CLAT Prep</h1>
+<p>Free CLAT Study Material & Mock Tests</p>
+</header>
 
-<h1>📚 Study Materials</h1>
+<div class="menu">
 
-<!-- 🔍 SEARCH -->
-<input type="text" id="search" placeholder="Search..." onkeyup="searchPDF()">
+<a href="pdfs.html" class="card">
+📚 Clat Study Material
+</a>
 
-<!-- 🎯 FILTER CATEGORY -->
-<div class="category-box">
+<a href="mocktest.html" class="card">
+📝 Mock Tests
+</a>
 
-  <button onclick="displayPDF(pdfData)">🏠 All</button>
+<a href="#" class="card">
+📊 Current Affairs
+</a>
 
-  <button onclick="filterCategory('Legal Reasoning')">⚖ Legal Reasoning</button>
+<a href="pdfs.html" class="card">
+🪖📚 NDA Study Material 
+</a>
 
-  <button onclick="filterCategory('Logical Reasoning')">🧠 Logical Reasoning</button>
-
-  <button onclick="filterCategory('Quantitative Techniques')">➗ Quantitative Techniques</button>
-
-  <button onclick="filterCategory('Previous Year Paper')">📄 Previous Year Paper</button>
-
-  <button onclick="filterCategory('CLAT Mock Test')">📝 CLAT Mock Test</button>
-
-  <button onclick="filterCategory('CLAT Sample Paper')">📘 CLAT Sample Paper</button>
-
-  <button onclick="filterCategory('AILET Mock Test')">🧾 AILET Mock Test</button>
-
-  <button onclick="filterCategory('AILET PYQs')">📑 AILET PYQs</button>
-
-  <button onclick="filterCategory('SLAT Notes')">📒 SLAT Notes</button>
-
-  <button onclick="filterCategory('SLAT Mock Test')">🧪 SLAT Mock Test</button>
-
-  <button onclick="filterCategory('English')">📖 English</button>
-
-  <button onclick="filterCategory('General Knowledge')">🌍 General Knowledge</button>
+<a href="#" class="card">
+⭐ Premium
+</a>
 
 </div>
 
-<!-- 📚 PDF LIST -->
-<div id="pdfList"></div>
+<footer>
+<p>Made by Neel</p>
 
-<script src="script.js"></script>
+<a href="about.html">About</a> |
+<a href="contact.html">Contact</a> |
+<a href="privacy.html">Privacy Policy</a>
+
+</footer>
 
 </body>
 </html>
