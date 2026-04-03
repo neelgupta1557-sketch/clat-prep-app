@@ -10,8 +10,8 @@
 
 <body>
 
+<!-- 🔐 LOGIN CHECK -->
 <script>
-// 🔐 Login check
 if(localStorage.getItem("user") === null){
   window.location.href = "login.html";
 }
@@ -22,27 +22,35 @@ if(localStorage.getItem("user") === null){
 <header style="position:relative;">
   <h2>📚 CLAT Study Material</h2>
 
-  <!-- 👤 Username -->
   <p id="welcomeUser" style="font-size:14px;"></p>
 
-  <!-- 🖼️ Profile Image -->
+  <!-- 🖼️ Profile -->
   <div class="top-profile" style="position:absolute; right:120px; top:10px;">
-    <img id="profilePic" src="default.png" 
+    <img id="profilePic" src="default.png"
       style="width:40px; height:40px; border-radius:50%; cursor:pointer; object-fit:cover;">
     <input type="file" id="uploadPic" accept="image/*" style="display:none;">
   </div>
 
   <!-- 🚪 Logout -->
-  <button onclick="logout()" 
+  <button onclick="logout()"
     style="position:absolute; right:15px; top:15px; padding:6px 12px; border-radius:10px; cursor:pointer;">
     🚪 Logout
   </button>
 </header>
 
+<!-- 🔎 SEARCH -->
 <input type="text" id="search" placeholder="🔍 Search PDF..." onkeyup="searchPDF()">
 
 <br><br>
 
+<!-- 🔥 LEVEL RESET BUTTON (NEW) -->
+<button onclick="localStorage.removeItem('selectedMain'); localStorage.removeItem('selectedSub'); location.reload();">
+🔄 Reset Filters
+</button>
+
+<br><br>
+
+<!-- 📂 FILTER BUTTONS (OLD SYSTEM SAFE) -->
 <div class="menu">
 
 <button onclick="filterCategory('Legal Reasoning')">⚖️ Legal</button>
@@ -59,28 +67,48 @@ if(localStorage.getItem("user") === null){
 <button onclick="filterCategory('SLAT Notes')">📚 SLAT Notes</button>
 <button onclick="filterCategory('SLAT Mock Test')">📝 SLAT Mock</button>
 
-<button onclick="filterCategory('Legal Reasoning')">📖 Legal English / GK</button>
-
-<button onclick="displayPDF(pdfData)">🔄 Show All</button>
-
 </div>
 
 <br><br>
 
+<!-- 📄 PDF LIST -->
 <div id="pdfList"></div>
 
 <script src="script.js"></script>
 
-<!-- 🔻 Bottom Nav -->
+<!-- 🔥 NEW LEVEL SYSTEM AUTO LOADER -->
+<script>
+window.onload = function(){
+
+  let main = localStorage.getItem("selectedMain");
+  let sub = localStorage.getItem("selectedSub");
+
+  let filtered = pdfData;
+
+  // LEVEL 2 FILTER (Main category)
+  if(main){
+    filtered = filtered.filter(pdf => pdf.category === main);
+  }
+
+  // LEVEL 3 FILTER (Sub category)
+  if(sub){
+    filtered = filtered.filter(pdf => pdf.sub === sub);
+  }
+
+  displayPDF(filtered);
+};
+</script>
+
+<!-- 🔻 BOTTOM NAV -->
 <div class="bottom-nav">
-  <a href="#">🏠 Home</a>
+  <a href="index.html">🏠 Home</a>
   <a href="#">📚 Study</a>
   <a href="#">📝 Mock</a>
   <a href="#" onclick="goProfile()">👤 Profile</a>
 </div>
 
 <script>
-// 👤 Username show (safe version)
+// 👤 Username show
 let user = localStorage.getItem("user") || "User";
 let welcome = document.getElementById("welcomeUser");
 if(welcome){
