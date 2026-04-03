@@ -163,3 +163,91 @@ header {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* =========================
+   🔥 FINAL HEADER SYSTEM
+========================= */
+
+header {
+  position: relative;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/* 👤 Welcome text */
+#welcomeUser {
+  font-size: 14px;
+  margin-top: 5px;
+  opacity: 0.9;
+}
+
+/* 🖼️ PROFILE CONTAINER */
+.top-profile {
+  position: absolute;
+  right: 120px;
+  top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* PROFILE IMAGE */
+.top-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.top-profile img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* HIDE FILE INPUT */
+#uploadPic {
+  display: none;
+}
+
+/* 🚪 LOGOUT BUTTON */
+header button {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: none;
+  background: #ff4d4d;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+header button:hover {
+  background: #e60000;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .top-profile {
+    right: 90px;
+    top: 12px;
+  }
+
+  .top-profile img {
+    width: 35px;
+    height: 35px;
+  }
+
+  header {
+    font-size: 18px;
+  }
+}
