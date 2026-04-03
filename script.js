@@ -54,7 +54,19 @@ let pdfData = [
   {title:"Remedies for breach of contract", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/remedies_for_breach_of_contract.pdf"},    
   {title:"Differences", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/differences.pdf"},    
   {title:"Special Contracts", category:"Legal Reasoning", sub:"Contract Act", type:"github", link:"pdfs/special_contracts.pdf"},    
-  {title:"Misc Law", category:"Legal Reasoning", sub:"Miscellaneous", type:"github", link:"pdfs/misc1.pdf"},    
+  {title:"Important legal maxims", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/important_legal_maxims.pdf"},    
+    {title:"100 Important legal terms", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/100_important_legal_terms.pdf"},    
+    {title:"United Nations", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/united_nations.pdf"},    
+    {title:"Most important case laws of 2022-2023", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/most_important_case_laws_of_2022-2023.pdf"},    
+    {title:"Landmark Judgement", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/landmark_judgement.pdf"},    
+    {title:"Lagal Aptitude-I", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/legal_aptitude.pdf"},    
+    {title:"Transfer of property act 1882", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/transfer_of_property_act_1882.pdf"},    
+  {title:"Pocso (Protection of children from sexual offences) Act 2012", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/pocso_protection_of_children_from_sexual_offences_act_2012.pdf"},    
+    {title:"International law", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/international_law.pdf"},    
+    {title:"Family law", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/family_law.pdf"},    
+    {title:"Information technology Act 2000", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/information_technology_act_2000.pdf"},    
+    {title:"Intellectual Property Rights", category:"Legal Reasoning", sub:"Miscellaneous Laws", type:"github", link:"pdfs/intellectual_property_rights.pdf"},    
+
 
   // 👉 DRIVE (yahan apne ID daal)
   {title:"Legal English", category:"Legal Reasoning", sub:"English", type:"drive", fileId:"PASTE_ID"},    
