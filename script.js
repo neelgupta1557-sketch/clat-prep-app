@@ -90,13 +90,43 @@ let pdfData = [
     {title:"Statement And Assumption", category:"Logical Reasoning", sub:"Logical", type:"drive", fileId:"1-8iZviuDnpNsUqZF1XnUw_7r6REVyL7w"},    
     {title:"Syllogism", category:"Logical Reasoning", sub:"Logical", type:"github", link:"pdfs/syllogism.pdf"},    
     {title:"Order Ranking And Sitting Arrangement", category:"Logical Reasoning", sub:"Logical", type:"github", link:"pdfs/order_ranking.pdf"},    
-  {title:"Quant Notes", category:"Quantitative Techniques", sub:"Math", type:"github", link:"pdfs/quant1.pdf"},    
-  {title:"CLAT PYQ", category:"Previous Year Papers", sub:"CLAT", type:"github", link:"pdfs/pyq1.pdf"},    
+  
+  {title:"Number System and Simplifications", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"LCM and HCF", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Surds And Indices", category:"Quantitative Techniques", sub:"Math", type:"github", link:"pdfs/surds_and_indices.pdf"},   
+  {title:"Ratio, Proportion and Partnership", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Mixture and Alligation", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Percentage", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"https://drive.google.com/file/d/1dIWbQ621hDNOGl3Y1gEraZb30J-vZhAN/preview"},   
+  {title:"Profit and Loss", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"1-x4kfkxDQ4mPpIl6rJewk5Q5IuR5y0tm/preview"},   
+  {title:"Simple Intrest and Compound Intrest", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Average", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Time and Work", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Pipe and cistern", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Speed, Time and Distance", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Boat and stream", category:"Quantitative Techniques", sub:"Math", type:"github", link:"pdfs/boat_and_stream.pdf"},   
+  {title:"Data Interpretation", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Line, Angle and Traingle", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Circle", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Quadrilaterals", category:"Quantitative Techniques", sub:"Math", type:"github", link:"pdfs/quadrilaterals.pdf"},   
+  {title:"Co-ordinate Geometry", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Algebra", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Trigonometry", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Height and Distance", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Mensuration-I", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  {title:"Mensuration-II", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
+  
+  {title:"CLAT PYQ", category:"Previous Year Papers", sub:"CLAT", type:"github", link:"pdfs/pyq1.pdf"},  
+  
   {title:"CLAT Mock", category:"CLAT Mock Test", sub:"CLAT", type:"github", link:"pdfs/clat_mock1.pdf"},    
+  
   {title:"CLAT Sample", category:"CLAT Sample Paper", sub:"CLAT", type:"github", link:"pdfs/sample1.pdf"},    
+  
   {title:"AILET Mock", category:"AILET Mock Test", sub:"AILET", type:"github", link:"pdfs/ailet_mock1.pdf"},    
+  
   {title:"AILET PYQ", category:"AILET PYQs", sub:"AILET", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  
   {title:"SLAT Notes", category:"SLAT Notes", sub:"SLAT", type:"github", link:"pdfs/slat_notes.pdf"},    
+  
   {title:"SLAT Mock", category:"SLAT Mock Test", sub:"SLAT", type:"github", link:"pdfs/slat_mock.pdf"}    
 
 ];
