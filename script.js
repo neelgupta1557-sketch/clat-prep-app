@@ -115,19 +115,39 @@ let pdfData = [
   {title:"Mensuration-I", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
   {title:"Mensuration-II", category:"Quantitative Techniques", sub:"Math", type:"drive", fileId:"pdfs/quant1.pdf"},   
   
-  {title:"CLAT PYQ", category:"Previous Year Papers", sub:"CLAT", type:"github", link:"pdfs/pyq1.pdf"},  
+  {title:"CLAT PYQ", category:"Previous Year Papers", sub:"CLAT PYQs", type:"github", link:"pdfs/pyq1.pdf"},  
   
-  {title:"CLAT Mock", category:"CLAT Mock Test", sub:"CLAT", type:"github", link:"pdfs/clat_mock1.pdf"},    
+  {title:"CLAT Mock", category:"CLAT Mock Test", sub:"CLAT MOCK TEST", type:"github", link:"pdfs/clat_mock1.pdf"},    
   
-  {title:"CLAT Sample", category:"CLAT Sample Paper", sub:"CLAT", type:"github", link:"pdfs/sample1.pdf"},    
+  {title:"CLAT Sample paper set-1", category:"CLAT Sample Paper", sub:"CLAT SAMPLE PAPER", type:"github", link:"pdfs/sample1.pdf"},    
+  {title:"CLAT Sample paper set-2", category:"CLAT Sample Paper", sub:"CLAT SAMPLE PAPER", type:"github", link:"pdfs/sample1.pdf"},    
+  {title:"CLAT Sample paper set-3", category:"CLAT Sample Paper", sub:"CLAT SAMPLE PAPER", type:"github", link:"pdfs/sample1.pdf"},    
+  {title:"CLAT Sample paper set-4", category:"CLAT Sample Paper", sub:"CLAT SAMPLE PAPER", type:"github", link:"pdfs/sample1.pdf"},    
+  {title:"CLAT Sample paper set-5", category:"CLAT Sample Paper", sub:"CLAT SAMPLE PAPER", type:"github", link:"pdfs/sample1.pdf"},    
+  {title:"CLAT Sample paper set-6", category:"CLAT Sample Paper", sub:"CLAT SAMPLE PAPER", type:"github", link:"pdfs/sample1.pdf"},    
+  {title:"CLAT Sample paper set-7", category:"CLAT Sample Paper", sub:"CLAT SAMPLE PAPER", type:"github", link:"pdfs/sample1.pdf"},    
+  {title:"CLAT Sample paper set-8", category:"CLAT Sample Paper", sub:"CLAT SAMPLE PAPER", type:"github", link:"pdfs/sample1.pdf"},    
   
-  {title:"AILET Mock", category:"AILET Mock Test", sub:"AILET", type:"github", link:"pdfs/ailet_mock1.pdf"},    
+  {title:"AILET Mock", category:"AILET Mock Test", sub:"AILET MOCK TEST", type:"github", link:"pdfs/ailet_mock1.pdf"},    
   
-  {title:"AILET PYQ", category:"AILET PYQs", sub:"AILET", type:"github", link:"pdfs/ailet_pyq.pdf"},    
-  
-  {title:"SLAT Notes", category:"SLAT Notes", sub:"SLAT", type:"github", link:"pdfs/slat_notes.pdf"},    
-  
-  {title:"SLAT Mock", category:"SLAT Mock Test", sub:"SLAT", type:"github", link:"pdfs/slat_mock.pdf"}    
+  {title:"AILET-2008-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2009-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2010-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2011-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2012-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2013-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2014-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2015-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2016-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2017-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2018-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2019-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2020-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2021-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2022-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2023-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2024-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
+  {title:"AILET-2025-solved paper", category:"AILET PYQs", sub:"AILET PYQs", type:"github", link:"pdfs/ailet_pyq.pdf"},    
 
 ];
 
