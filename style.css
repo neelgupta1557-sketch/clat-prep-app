@@ -122,3 +122,67 @@ header h1{
 }
 
 }
+
+/* CATEGORY PAGE HEADER */
+header h2{
+  margin:0;
+  font-size:30px;
+  font-weight:700;
+  color:white;
+}
+
+/* CATEGORY GRID */
+.menu{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+  padding:18px;
+}
+
+/* CATEGORY CARDS */
+.menu .card{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:78px;
+  text-align:center;
+  text-decoration:none;
+  background:white;
+  color:#222;
+  padding:18px;
+  border-radius:20px;
+  font-size:19px;
+  font-weight:700;
+  box-shadow:0 8px 18px rgba(0,0,0,0.08);
+  transition:.3s;
+}
+
+.menu .card:hover{
+  transform:translateY(-4px);
+}
+
+.menu .card:active{
+  transform:scale(.98);
+  background:#4f46e5;
+  color:white;
+}
+
+/* TABLET */
+@media(min-width:700px){
+  .menu{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  header h2{
+    font-size:25px;
+  }
+
+  .menu .card{
+    min-height:70px;
+    font-size:17px;
+    padding:16px;
+  }
+}
