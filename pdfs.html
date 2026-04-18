@@ -1,56 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CLAT PDFs</title>
-  <link rel="stylesheet" href="style.css">
-
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<title>CLAT PDFs</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-<!-- 🔐 LOGIN CHECK -->
 <script>
 if(localStorage.getItem("user") === null){
-  window.location.href = "login.html";
+window.location.href="login.html";
 }
 </script>
 
 <div id="splash">🚀 Loading App...</div>
 
-<header style="position:relative;">
-  <h2>📚 CLAT Study Material</h2>
+<header>
+<h2>📚 CLAT Study Material</h2>
+<p id="welcomeUser"></p>
 
-  <p id="welcomeUser" style="font-size:14px;"></p>
+<div class="top-profile">
+<img id="profilePic" src="default.png">
+<input type="file" id="uploadPic" accept="image/*">
+</div>
 
-  <!-- 🖼️ Profile -->
-  <div class="top-profile" style="position:absolute; right:120px; top:10px;">
-    <img id="profilePic" src="default.png"
-      style="width:40px; height:40px; border-radius:50%; cursor:pointer; object-fit:cover;">
-    <input type="file" id="uploadPic" accept="image/*" style="display:none;">
-  </div>
-
-  <!-- 🚪 Logout -->
-  <button onclick="logout()"
-    style="position:absolute; right:15px; top:15px; padding:6px 12px; border-radius:10px; cursor:pointer;">
-    🚪 Logout
-  </button>
+<button onclick="logout()">🚪 Logout</button>
 </header>
 
-<!-- 🔎 SEARCH -->
 <input type="text" id="search" placeholder="🔍 Search PDF..." onkeyup="searchPDF()">
 
-<br><br>
-
-<!-- 🔥 LEVEL RESET BUTTON (NEW) -->
-<button onclick="localStorage.removeItem('selectedMain'); localStorage.removeItem('selectedSub'); location.reload();">
+<button class="reset-btn"
+onclick="localStorage.removeItem('selectedMain');localStorage.removeItem('selectedSub');location.reload();">
 🔄 Reset Filters
 </button>
 
-<br><br>
-
-<!-- 📂 FILTER BUTTONS (OLD SYSTEM SAFE) -->
 <div class="menu">
 
 <button onclick="filterCategory('Legal Reasoning')">⚖️ Legal</button>
@@ -59,7 +44,7 @@ if(localStorage.getItem("user") === null){
 <button onclick="filterCategory('Previous Year Papers')">📄 PYQs</button>
 
 <button onclick="filterCategory('CLAT Mock Test')">📝 CLAT Mock</button>
-<button onclick="filterCategory('CLAT Sample Paper')">📘 CLAT Sample</button>
+<button onclick="filterCategory('CLAT Sample Paper')">📘 Sample</button>
 
 <button onclick="filterCategory('AILET Mock Test')">📝 AILET Mock</button>
 <button onclick="filterCategory('AILET PYQs')">📄 AILET PYQs</button>
@@ -69,10 +54,14 @@ if(localStorage.getItem("user") === null){
 
 </div>
 
-<br><br>
-
-<!-- 📄 PDF LIST -->
 <div id="pdfList"></div>
+
+<div class="bottom-nav">
+<a href="index.html">🏠 Home</a>
+<a href="#">📚 Study</a>
+<a href="#">📝 Mock</a>
+<a href="#" onclick="goProfile()">👤 Profile</a>
+</div>
 
 <script src="script.js"></script>
 
@@ -81,53 +70,32 @@ const urlParams = new URLSearchParams(window.location.search);
 const cat = urlParams.get("cat");
 
 if(cat){
-  let filtered = pdfData.filter(pdf => pdf.category === cat);
-  displayPDF(filtered);
-}
-</script>
-
-<!-- 🔥 NEW LEVEL SYSTEM AUTO LOADER -->
-<script>
-window.onload = function(){
-
-  let main = localStorage.getItem("selectedMain");
-  let sub = localStorage.getItem("selectedSub");
-
-  let filtered = pdfData;
-
-  // LEVEL 2 FILTER (Main category)
-  if(main){
-    filtered = filtered.filter(pdf => pdf.category === main);
-  }
-
-  // LEVEL 3 FILTER (Sub category)
-  if(sub){
-    filtered = filtered.filter(pdf => pdf.sub === sub);
-  }
-
-  displayPDF(filtered);
-};
-</script>
-
-<!-- 🔻 BOTTOM NAV -->
-<div class="bottom-nav">
-  <a href="index.html">🏠 Home</a>
-  <a href="#">📚 Study</a>
-  <a href="#">📝 Mock</a>
-  <a href="#" onclick="goProfile()">👤 Profile</a>
-</div>
-
-<script>
-// 👤 Username show
-let user = localStorage.getItem("user") || "User";
-let welcome = document.getElementById("welcomeUser");
-if(welcome){
-  welcome.innerText = "Welcome, " + user + " 👋";
+let filtered = pdfData.filter(pdf => pdf.category === cat);
+displayPDF(filtered);
 }
 
-// 🔀 Profile page
+window.onload=function(){
+let main=localStorage.getItem("selectedMain");
+let sub=localStorage.getItem("selectedSub");
+
+let filtered=pdfData;
+
+if(main){
+filtered=filtered.filter(pdf=>pdf.category===main);
+}
+
+if(sub){
+filtered=filtered.filter(pdf=>pdf.sub===sub);
+}
+
+displayPDF(filtered);
+}
+
+let user=localStorage.getItem("user") || "User";
+document.getElementById("welcomeUser").innerText="Welcome, "+user+" 👋";
+
 function goProfile(){
-  window.location.href = "profile.html";
+window.location.href="profile.html";
 }
 </script>
 
