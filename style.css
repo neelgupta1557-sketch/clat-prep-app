@@ -186,3 +186,66 @@ header h2{
     padding:16px;
   }
 }
+
+/* FILTER BUTTONS 2 COLUMN */
+.menu{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;
+padding:15px;
+}
+
+.menu button{
+width:100%;
+padding:18px 10px;
+border:none;
+border-radius:18px;
+background:white;
+font-size:16px;
+font-weight:700;
+box-shadow:0 6px 14px rgba(0,0,0,0.08);
+color:#222;
+cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+.menu{
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.menu button{
+font-size:15px;
+padding:16px 8px;
+}
+}
+
+/* PDF CARDS */
+.card{
+background:white;
+padding:18px;
+border-radius:18px;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+margin-bottom:14px;
+}
+
+/* OPEN BUTTON */
+.card a:first-child button{
+background:#4f46e5 !important;
+color:white !important;
+border:none;
+padding:10px 16px;
+border-radius:20px;
+font-weight:600;
+}
+
+/* DOWNLOAD BUTTON */
+.download-btn{
+background:#10b981 !important;
+color:white !important;
+border:none;
+padding:10px 16px;
+border-radius:20px;
+font-weight:600;
+}
